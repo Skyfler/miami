@@ -1,3 +1,5 @@
+"use strict";
+
 function Menu(options) {
     this._elem = options.elem;
     this._openBtn = this._elem.querySelector('[data-component="nav_bar_toggle"]');

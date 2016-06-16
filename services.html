@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" id="services_page">
+<head>
+    <meta charset="UTF-8">
+    <title>MiamiBirth</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/style.css">
+    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoBwiZTQbw3fmz_HQFX3Ji7NXNOmAhdOo"></script>
+    <script defer src="build.js"></script>
+</head>
+<body>
+<header>
+    <div class="container clr">
+        <div class="brand_container">
+            <a class="brand clr">
+                <img class="logo" src="img/logo.png" alt="MiamiBirth logo">
+                <div class="brand_text">
+                    <div class="brand_title"><span>Miami</span><span>Birth</span></div>
+                    <div class="brand_description">Организация родов в Майами</div>
+                </div>
+            </a>
+        </div>
+        <div class="our_contacts clr">
+            <div class="tel_container clr">
+                <span class="contact_text">Свяжитесь с нами</span>
+                <span class="contact_tel">+38 (050) 123 45 67</span>
+            </div>
+            <span class="contact_text">или</span>
+            <ul class="social_menu clr">
+                <li class="facebook"><a href="#"></a></li>
+                <li class="vk"><a href="#"></a></li>
+                <li class="twitter"><a href="#"></a></li>
+                <li class="google"><a href="#"></a></li>
+                <li class="instagram"><a href="#"></a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="header_line"></div>
+<nav class="closed collapsed menu" id="main_menu">
+    <button class="nav_bar_toggle" data-component="nav_bar_toggle">Меню сайта</button>
+    <div class="nav_bar_container">
+        <ul class="nav_bar">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="#">Почему мы</a></li>
+            <li><a href="#">Медицина</a></li>
+            <li class="closed collapsed" data-component="submenu_container" data-state="closed">
+                <a href="#" data-component="submenu_toggle">Услуги</a>
+                <div class="submenu_bar">
+                    <ul class="submenu" data-component="submenu">
+                        <li><a href="#">Виза в США</a></li>
+                        <li><a href="#">Роды</a></li>
+                        <li><a href="#">Документы</a></li>
+                        <li><a href="#">Подбор Жилья</a></li>
+                        <li><a href="#">Аренда Авто</a></li>
+                        <li><a href="#">Помощь в Открытии Бизнеса</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">Цены</a></li>
+            <li><a href="#">Важная информация</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="slider_container">
+    <div class="slider">
+        <div class="slider_slide">
+            <img class="responsive_img" src="img/slider.jpg" alt="slider">
+            <div class="decor_circle_2"></div>
+            <div class="decor_circle_1"></div>
+            <h1 class="slider_text"></h1>
+        </div>
+    </div>
+</div>
+<section class="our_services">
+    <div class="container">
+        <h2 class="block_main_title">Наши услуги</h2>
+        <div class="block_description">Lorem Ipsum. Proin gravida nibh vel</div>
+        <div class="divider"></div>
+        <div class="row clr">
+            <div class="service_block visa_in_usa">
+                <div class="service_block_content">
+                    <div class="block_icon"></div>
+                    <span class="block_title">Виза в США</span>
+                    <div class="block_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,</div>
+                    <button class="details">Узнать больше</button>
+                </div>
+            </div>
+            <div class="service_block birth">
+                <div class="service_block_content">
+                    <div class="block_icon"></div>
+                    <span class="block_title">Роды</span>
+                    <div class="block_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,</div>
+                    <button class="details">Узнать больше</button>
+                </div>
+            </div>
+            <div class="clearfix hidden_lg"></div>
+            <div class="service_block documents_services">
+                <div class="service_block_content">
+                    <div class="block_icon"></div>
+                    <span class="block_title">Документы</span>
+                    <div class="block_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,</div>
+                    <button class="details">Узнать больше</button>
+                </div>
+            </div>
+            <div class="clearfix visible_lg"></div>
+            <div class="service_block finding_a_house">
+                <div class="service_block_content">
+                    <div class="block_icon"></div>
+                    <span class="block_title">Подбор жилья</span>
+                    <div class="block_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,</div>
+                    <button class="details">Узнать больше</button>
+                </div>
+            </div>
+            <div class="clearfix hidden_lg"></div>
+            <div class="service_block rent_a_car">
+                <div class="service_block_content">
+                    <div class="block_icon"></div>
+                    <span class="block_title">Аренда авто</span>
+                    <div class="block_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,</div>
+                    <button class="details">Узнать больше</button>
+                </div>
+            </div>
+            <div class="service_block help_in_business">
+                <div class="service_block_content">
+                    <div class="block_icon"></div>
+                    <span class="block_title">Помощь в открытии бизнеса</span>
+                    <div class="block_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,</div>
+                    <button class="details">Узнать больше</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="pre_footer_line"></div>
+<footer class="container clr">
+    <nav class="closed collapsed menu" id="footer_menu">
+        <button class="nav_bar_toggle" data-component="nav_bar_toggle">Меню сайта</button>
+        <div class="nav_bar_container">
+            <ul class="nav_bar">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Врачи</a></li>
+                <li><a href="#">Цены</a></li>
+                <li><a href="#">Партнеры</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+    <ul class="social_menu clr">
+        <li class="facebook"><a href="#"></a></li>
+        <li class="vk"><a href="#"></a></li>
+        <li class="twitter"><a href="#"></a></li>
+        <li class="google"><a href="#"></a></li>
+        <li class="instagram"><a href="#"></a></li>
+    </ul>
+    <div class="copyright">All rights reserved. Companyname 2016</div>
+</footer>
+<div class="footer_line"></div>
+</body>
+</html>

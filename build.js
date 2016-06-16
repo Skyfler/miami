@@ -55,6 +55,17 @@
 	    var footerMenu = new Menu({
 	        elem: document.querySelector('#footer_menu')
 	    });
+	    var mapElem = document.querySelector('#map_container>.map');
+	    if (mapElem) {
+	        var map = new google.maps.Map(mapElem, {
+	            zoom: 16,
+	            center: {lat: 49.99335, lng: 36.23237},
+	            streetViewControl: false,
+	            mapTypeControl: false,
+	            scrollwheel: false,
+	            draggable: false
+	        });
+	    }
 	
 	})();
 
@@ -62,6 +73,8 @@
 /* 1 */
 /***/ function(module, exports) {
 
+	"use strict";
+	
 	function Menu(options) {
 	    this._elem = options.elem;
 	    this._openBtn = this._elem.querySelector('[data-component="nav_bar_toggle"]');
@@ -129,7 +142,6 @@
 	    submenuContainer.dataset.state = 'open';
 	    submenuContainer.classList.add('open');
 	    submenuContainer.classList.remove('closed');
-	    submenuBar.style.height = submenu.offsetHeight + 'px';
 	    submenuContainer.classList.remove('collapsed');
 	    setTimeout(function(){
 	        submenuBar.style.height = '';
