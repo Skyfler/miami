@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <title>MiamiBirth</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/style.min.css">
-    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" href="styles/style.css">
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoBwiZTQbw3fmz_HQFX3Ji7NXNOmAhdOo"></script>
     <script defer src="build.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/css3-mediaqueries.js"></script>
+    <script src="js/html5shiv.js"></script><
+    <![endif]-->
 </head>
 <body>
 <header>
@@ -15,10 +18,10 @@
         <div class="brand_container">
             <a class="brand clr">
                 <img class="logo" src="img/logo.png" alt="MiamiBirth logo">
-                <div class="brand_text">
+                <h1 class="brand_text">
                     <div class="brand_title"><span>Miami</span><span>Birth</span></div>
                     <div class="brand_description">Организация родов в Майами</div>
-                </div>
+                </h1>
             </a>
         </div>
         <div class="our_contacts clr">
@@ -39,12 +42,40 @@
 </header>
 <div class="header_line"></div>
 <nav class="closed collapsed menu" id="main_menu">
-    <button class="nav_bar_toggle" data-component="nav_bar_toggle">Меню сайта</button>
+    <div class="btn_panel">
+        <button class="nav_bar_toggle" data-component="nav_bar_toggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+    </div>
     <div class="nav_bar_container">
         <ul class="nav_bar">
             <li><a href="#">Главная</a></li>
-            <li><a href="#">Почему мы</a></li>
-            <li><a href="#">Медицина</a></li>
+            <li class="closed collapsed" data-component="submenu_container" data-state="closed">
+                <a href="article.html" data-component="submenu_toggle">О нас</a>
+                <div class="submenu_bar">
+                    <ul class="submenu" data-component="submenu">
+                        <li><a href="#">Почему мы?</a></li>
+                        <li><a href="#">Роды в Майами</a></li>
+                        <li><a href="#">Процесс работы</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="closed collapsed" data-component="submenu_container" data-state="closed">
+                <a href="med.html" data-component="submenu_toggle">Медицина</a>
+                <div class="submenu_bar">
+                    <ul class="submenu" data-component="submenu">
+                        <li><a href="#">Гинекологи в США</a></li>
+                        <li><a href="#">Госпитали и больницы в США</a></li>
+                        <li><a href="#">Педиатрия</a></li>
+                        <li><a href="#">Неонатологи</a></li>
+                        <li><a href="#">Стволовые Клетки</a></li>
+                        <li><a href="#">Курсы перед родами</a></li>
+                        <li><a href="#">Йога для беременных</a></li>
+                    </ul>
+                </div>
+            </li>
             <li class="closed collapsed" data-component="submenu_container" data-state="closed">
                 <a href="services.html" data-component="submenu_toggle">Услуги</a>
                 <div class="submenu_bar">
@@ -65,21 +96,41 @@
     </div>
 </nav>
 <div class="slider_container">
-    <div class="slider">
-        <a class="arrow right_arrow">
+    <div class="slider" id="slider">
+        <a class="arrow right_arrow" data-component="slider_control" data-action="forward">
             <div></div>
             <div></div>
         </a>
-        <div class="slider_slide">
-            <img class="responsive_img" src="img/slider.jpg" alt="slider">
-            <div class="decor_circle_2"></div>
-            <div class="decor_circle_1"></div>
-            <h1 class="slider_text">
-                <span>Организация родов в Майами</span>
-                <span>Proin gravida nibh vel</span>
-            </h1>
+        <div class="overflow_block clr">
+            <div class="slider_slide" data-component="slide">
+                <img class="responsive_img" src="img/slider.jpg" alt="slider">
+                <div class="decor_circle_2"></div>
+                <div class="decor_circle_1"></div>
+                <div class="slider_text">
+                    <span>Организация родов в Майами1</span>
+                    <span>Proin gravida nibh vel</span>
+                </div>
+            </div>
+            <div class="slider_slide" data-component="slide">
+                <img class="responsive_img" src="img/slider.jpg" alt="slider">
+                <div class="decor_circle_2"></div>
+                <div class="decor_circle_1"></div>
+                <div class="slider_text">
+                    <span>Организация родов в Майами2</span>
+                    <span>Proin gravida nibh vel</span>
+                </div>
+            </div>
+            <div class="slider_slide" data-component="slide">
+                <img class="responsive_img" src="img/slider.jpg" alt="slider">
+                <div class="decor_circle_2"></div>
+                <div class="decor_circle_1"></div>
+                <div class="slider_text">
+                    <span>Организация родов в Майами3</span>
+                    <span>Proin gravida nibh vel</span>
+                </div>
+            </div>
         </div>
-        <a class="arrow left_arrow">
+        <a class="arrow left_arrow" data-component="slider_control" data-action="back">
             <div></div>
             <div></div>
         </a>
@@ -221,52 +272,61 @@
         <h2 class="block_main_title">Отзывы наших клиентов</h2>
         <div class="block_description">Lorem Ipsum. Proin gravida nibh vel</div>
         <div class="divider"></div>
-        <div class="review_blocks_container">
-            <a href="#" class="arrow right_arrow">
-                <svg>
-                    <polyline points="0,0 28,25 0,50" fill="transparent" stroke-width="1" stroke="rgb(255,255,255)"/>
-                </svg>
-            </a>
-            <a href="#" class="arrow left_arrow">
-                <svg>
-                    <polyline points="28,0 0,25 28,50" fill="transparent" stroke-width="1" stroke="rgb(255,255,255)"/>
-                </svg>
-            </a>
-            <div class="review_block">
-                <div class="review_text">
-                    ‘’Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare’’
-                    <svg class="line">
-                        <polyline points="0,0 290,0 297.5,7.5 305,0 595,0" fill="transparent" stroke-width="2" stroke="rgb(255,255,255)"/>
-                    </svg>
+    </div>
+
+    <div class="slider" id="carousel">
+        <a class="arrow right_arrow" data-component="slider_control" data-action="forward">
+            <svg>
+                <polyline points="0,0 28,25 0,50" fill="transparent" stroke-width="1" stroke="rgb(255,255,255)"/>
+            </svg>
+        </a>
+        <a class="arrow left_arrow"  data-component="slider_control" data-action="back">
+            <svg>
+                <polyline points="28,0 0,25 28,50" fill="transparent" stroke-width="1" stroke="rgb(255,255,255)"/>
+            </svg>
+        </a>
+        <div class="overflow_block clr">
+            <div class="slider_slide selected" data-component="slide">
+                <div class="review_block">
+                    <div class="review_text">
+                        ‘’Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare’’
+                        <svg class="line">
+                            <polyline points="0,0 290,0 297.5,7.5 305,0 595,0" fill="transparent" stroke-width="2" stroke="rgb(255,255,255)"/>
+                        </svg>
+                    </div>
+                    <a href="#" class="review_icon">
+                        <img src="img/img3.png" class="responsive_img" alt="review_icon">
+                    </a>
+                    <div class="review_name">Maria Doe</div>
                 </div>
-                <div class="review_icon">
-                    <img src="img/img3.png" class="responsive_img" alt="reviw_icon">
-                </div>
-                <div class="review_name">Maria Doe</div>
             </div>
-            <div class="review_block selected">
-                <div class="review_text">
-                    ‘’Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare’’
-                    <svg class="line">
-                        <polyline points="0,0 290,0 297.5,7.5 305,0 595,0" fill="transparent" stroke-width="2" stroke="rgb(255,255,255)"/>
-                    </svg>
+            <div class="slider_slide" data-component="slide">
+                <div class="review_block">
+                    <div class="review_text">
+                        ‘’Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare’’
+                        <svg class="line">
+                            <polyline points="0,0 290,0 297.5,7.5 305,0 595,0" fill="transparent" stroke-width="2" stroke="rgb(255,255,255)"/>
+                        </svg>
+                    </div>
+                    <a href="#" class="review_icon">
+                        <img src="img/img3.png" class="responsive_img" alt="review_icon">
+                    </a>
+                    <div class="review_name">Maria Doe</div>
                 </div>
-                <div class="review_icon">
-                    <img src="img/img3.png" class="responsive_img" alt="reviw_icon">
-                </div>
-                <div class="review_name">Maria Doe</div>
             </div>
-            <div class="review_block">
-                <div class="review_text">
-                    ‘’Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare’’
-                    <svg class="line">
-                        <polyline points="0,0 290,0 297.5,7.5 305,0 595,0" fill="transparent" stroke-width="2" stroke="rgb(255,255,255)"/>
-                    </svg>
+            <div class="slider_slide" data-component="slide">
+                <div class="review_block">
+                    <div class="review_text">
+                        ‘’Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare’’
+                        <svg class="line">
+                            <polyline points="0,0 290,0 297.5,7.5 305,0 595,0" fill="transparent" stroke-width="2" stroke="rgb(255,255,255)"/>
+                        </svg>
+                    </div>
+                    <a href="#" class="review_icon">
+                        <img src="img/img3.png" class="responsive_img" alt="review_icon">
+                    </a>
+                    <div class="review_name">Maria Doe</div>
                 </div>
-                <div class="review_icon">
-                    <img src="img/img3.png" class="responsive_img" alt="reviw_icon">
-                </div>
-                <div class="review_name">Maria Doe</div>
             </div>
         </div>
     </div>
@@ -328,7 +388,13 @@
 </section>
 <footer class="container clr">
     <nav class="closed collapsed menu" id="footer_menu">
-        <button class="nav_bar_toggle" data-component="nav_bar_toggle">Меню сайта</button>
+        <div class="btn_panel">
+            <button class="nav_bar_toggle" data-component="nav_bar_toggle">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+        </div>
         <div class="nav_bar_container">
             <ul class="nav_bar">
                 <li><a href="#">Главная</a></li>

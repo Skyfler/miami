@@ -16,7 +16,7 @@ Menu.prototype._onClick = function(e) {
 };
 
 Menu.prototype._toggleMenu = function(target) {
-    if (target === this._openBtn) {
+    if (this._openBtn.contains(target)) {
         if (this._state === 'closed') {
             this._openMenu.bind(this)();
         } else {
@@ -67,6 +67,7 @@ Menu.prototype._openSubMenu = function(submenuContainer) {
     submenuContainer.dataset.state = 'open';
     submenuContainer.classList.add('open');
     submenuContainer.classList.remove('closed');
+    submenuBar.style.height = submenu.offsetHeight + 'px';
     submenuContainer.classList.remove('collapsed');
     setTimeout(function(){
         submenuBar.style.height = '';
