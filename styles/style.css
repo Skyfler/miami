@@ -707,22 +707,27 @@ ul {
 #main_menu .btn_panel {
     height: 50px;
     position: relative;
-    border-bottom: 3px solid #e6e6e6;
+    border-bottom: 3px solid rgb(238, 238, 238);
 }
 
 #main_menu .nav_bar_toggle {
     border: 1px solid transparent;
     border-radius: 5px;
     position: absolute;
-    padding: 5px 4px;
-    top: calc(50% - 18.5px);
-    left: 20px;
+    padding: 10px 20px;
+    top: 0;
+    left: 0;
     background: none;
+    transition: background-color ease 0.3s;
 }
 
-#main_menu .nav_bar_toggle:hover {
-    background: rgba(0, 0, 0, 0.1);
+#main_menu.open .nav_bar_toggle {
+    background-color: rgb(238, 238, 238);
 }
+
+/*#main_menu .nav_bar_toggle:hover {
+    background: rgba(0, 0, 0, 0.1);
+}*/
 
 #main_menu .nav_bar_toggle div {
     width: 30px;
@@ -733,6 +738,10 @@ ul {
 
 #main_menu .nav_bar_toggle div:last-child {
     margin-bottom: 0;
+}
+
+#main_menu .nav_bar_container {
+    border-bottom: 3px solid rgb(238, 238, 238);
 }
 
 #main_menu li a {
@@ -850,7 +859,7 @@ ul {
 
 .about_us .block_content .text {
     font-size: 1.6em;
-    font-family: Verdana, sans-serif;
+    font-family: Roboto, sans-serif;
     color: #6c6c6c;
     margin-top: 40px;
     margin-bottom: 0;
@@ -884,7 +893,7 @@ ul {
     font-size: 1.2em;
     text-transform: uppercase;
     font-weight: 900;
-    background-color: transparent;
+    background: none;
     padding: 12px 20px 8px;
     color: #75c7d6;
     border-radius: 19px;
@@ -1217,7 +1226,7 @@ ul {
     font-size: 1.2em;
     text-transform: uppercase;
     font-weight: 900;
-    background-color: transparent;
+    background: none;
     padding: 12px 32px 8px;
     color: #fff;
     border-radius: 19px;
@@ -1339,7 +1348,7 @@ ul {
     font-size: 1.2em;
     text-transform: uppercase;
     font-weight: 900;
-    background-color: transparent;
+    background: none;
     padding: 12px 32px 8px;
     color: #fff;
     border-radius: 19px;
@@ -1708,6 +1717,11 @@ ul {
     border-radius: 19px;
     border: 2px solid #fff;
     margin-top: 25px;
+    transition: background-color ease 0.5s;
+}
+
+.contact_us .form_container .send:hover {
+    background-color: #7ecfe2;
 }
 
 .contacts {
@@ -1849,13 +1863,19 @@ ul {
     font-size: 1.2em;
     text-transform: uppercase;
     font-weight: 900;
-    background: #ff5c7b;
+    background-color: #ff5c7b;
     padding: 12px 35px 8px;
     color: #fff;
     border-radius: 19px;
     border: 2px solid #fff;
     margin-top: 25px;
+    transition: background-color ease 0.5s;
 }
+
+.contacts .form_container .send:hover {
+    background-color: #7ecfe2;
+}
+
 
 .contacts .form_container #map_container {
     width: 100%;
@@ -1893,7 +1913,7 @@ ul {
 .article .article_text {
     text-align: left;
     color: #6c6c6c;
-    font: 1.6em Verdana, sans-serif;
+    font: 1.6em Roboto, sans-serif;
     padding-right: 25px;
     padding-left: 25px;
     position: relative;
@@ -1921,7 +1941,7 @@ ul {
     position: absolute;
 }
 
-/* block "medicine", page "med.html"
+/* section "medicine", page "med.html"
    =================================== BEGINNING ======================================= */
 .medicine {
     overflow: hidden;
@@ -2027,7 +2047,7 @@ ul {
     font-size: 1.2em;
     text-transform: uppercase;
     font-weight: 900;
-    background-color: transparent;
+    background: none;
     padding: 12px 32px 8px;
     color: #fff;
     border-radius: 19px;
@@ -2046,8 +2066,121 @@ ul {
     color: rgb(255, 92, 123);
     border-color: rgb(255, 92, 123);
 }
-/* block "medicine", page "med.html"
+/* section "medicine", page "med.html"
    =================================== END ====================================== */
+
+/* section "prices", page "prices.html"
+   =================================== BEGINNING ======================================= */
+.prices {
+    overflow: hidden;
+}
+
+.prices .container {
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+.prices .block_main_title {
+    font-size: 3em;
+    color: #9de0ff;
+}
+
+.prices .block_description {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #8d8d8d;
+}
+
+.prices .divider {
+    background: #9de0ff;
+}
+
+.prices .block_content {
+    float: left;
+    width: 100%;
+    text-align: left;
+    padding: 0 10px 0;
+}
+
+.prices .block_content .title {
+    text-transform: uppercase;
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-left: 82px;
+    color: #ff5c7b;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+
+.prices .block_content .text {
+    font-size: 1.6em;
+    font-family: Roboto, sans-serif;
+    color: #6c6c6c;
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+.prices .block_content .decor_container {
+    position: relative;
+}
+
+.prices .block_content .decor_circle_3 {
+    height: 128px;
+    width: 128px;
+    background: rgba(162, 233, 246, 0.3);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.prices .block_content .decor_circle_4 {
+    height: 48px;
+    width: 48px;
+    background: rgba(162, 233, 246, 0.8);
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+
+.prices .img_block {
+    float: left;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.prices .img_block .img_placeholder {
+    display: none;
+}
+
+.prices .img_block img{
+    margin: 0 auto;
+    position: relative;
+}
+
+.prices .decor_circle_1 {
+    width: 1054px;
+    height: 1054px;
+    border-radius: 50%;
+    background: rgba(162, 233, 246, 0.3);
+    position: absolute;
+    left: calc(50% + 65px);
+    top: -10px;
+}
+
+.prices .decor_circle_2 {
+    width: 944px;
+    height: 944px;
+    border-radius: 50%;
+    background: rgba(162, 233, 246, 0.8);
+    position: absolute;
+    left: calc(50% + 47px);
+    top: 60px;
+}
+/* section "prices", page "prices.html"
+   =================================== END ======================================= */
 
 .pre_footer_line {
     height: 6px;
@@ -2064,20 +2197,24 @@ footer {
 }
 
 #footer_menu .btn_panel {
-    height: 50px;
+    height: 53px;
     position: relative;
-    border-bottom: 3px solid #e6e6e6;
+    border-bottom: 3px solid rgb(238, 238, 238);
     border-top: 3px solid #9fe0fe;
 }
 
 #footer_menu .nav_bar_toggle {
     border: 1px solid transparent;
-    border-radius: 5px;
     position: absolute;
-    padding: 5px 4px;
-    top: calc(50% - 18.5px);
-    left: 20px;
+    padding: 10px 20px;
+    top: 0;
+    left: 0;
     background: none;
+    transition: background-color ease 0.3s;
+}
+
+#footer_menu.open .nav_bar_toggle {
+    background-color: rgb(238, 238, 238);
 }
 
 #footer_menu .nav_bar_container {
@@ -2085,11 +2222,12 @@ footer {
     bottom: 100%;
     width: 100%;
     background: #fff;
+    border-top: 3px solid rgb(238, 238, 238);
 }
 
-#footer_menu .nav_bar_toggle:hover {
+/*#footer_menu .nav_bar_toggle:hover {
     background: rgba(0, 0, 0, 0.1);
-}
+}*/
 
 #footer_menu .nav_bar_toggle div {
     width: 30px;
@@ -2119,7 +2257,11 @@ footer {
     text-decoration: underline;
 }
 
-#services_page #footer_menu .nav_bar>li:hover>a, #contacts_page #footer_menu .nav_bar>li:hover>a {
+#services_page #footer_menu .nav_bar>li:hover>a,
+#contacts_page #footer_menu .nav_bar>li:hover>a,
+#med_page #footer_menu .nav_bar>li:hover>a,
+#article_page #footer_menu .nav_bar>li:hover>a,
+#prices_page #footer_menu .nav_bar>li:hover>a {
     color: #9ddfff;
 }
 
@@ -2197,6 +2339,7 @@ footer .social_menu {
         position: relative;
         width: auto;
         bottom: 0;
+        border: none;
     }
 
     #footer_menu.closed .nav_bar_container, #footer_menu.collapsed .nav_bar_container {
@@ -2406,6 +2549,10 @@ footer .social_menu {
         opacity: 1;
         -webkit-animation: display_block_through_opacity  0.5s ease-in-out both;
         animation: display_block_through_opacity  0.5s ease-in-out both;
+    }
+
+    #main_menu .nav_bar_container {
+        border: none;
     }
 
     #main_menu li a {
@@ -2688,12 +2835,12 @@ footer .social_menu {
         left: -316px;
     }
 
-    /* block "medicine", page "med.html"
+    /* section "medicine", page "med.html"
        =================================== BEGINNING ======================================= */
     .medicine .medicine_block {
         width: 50%;
     }
-    /* block "medicine", page "med.html"
+    /* section "medicine", page "med.html"
    =================================== END ====================================== */
 
     .article .article_text {
@@ -2813,21 +2960,17 @@ footer .social_menu {
         width: 43.66666666%;
         margin-left: 7.33333333%;
         margin-top: 0;
-        max-width: 493px;
+        max-width: 493px;                                   /* = img_width */
     }
 
     .about_us .img_block .img_placeholder {
         display: block;
-        width: 100%;
-        max-width: 493px;
-        padding-top: 76.267748478701825557809330628803%;
-        position: relative;
+        padding-top: 76.267748478701825557809330628803%;    /* = (img_height / (img_width / 100%)) */
     }
 
     .about_us .img_block .img_container {
         position: absolute;
         width: 43.6667%;
-        max-height: 376px;
         top: 50%;
     }
 
@@ -2978,6 +3121,37 @@ footer .social_menu {
         right: 0;
     }
 
+    /* section "prices", page "prices.html"
+   =================================== BEGINNING ======================================= */
+    .prices .block_content {
+        width: 36.33333333%;
+        margin-left: 7.33333333%;
+    }
+
+    .prices .img_block {
+        width: 43.66666666%;
+        margin-left: 7.33333333%;
+        margin-top: 0;
+        max-width: 505px;                                   /* = img_width */
+    }
+
+    .prices .img_block .img_placeholder {
+        display: block;
+        padding-top: 74.455445544554455445544554455446%;    /* = (img_height / (img_width / 100%)) */
+    }
+
+    .prices .img_block .img_container {
+        position: absolute;
+        width: 43.6667%;
+        top: 50%;
+    }
+
+    .prices .img_block .img_container img{
+        transform: translateY(-50%);
+    }
+    /* section "prices", page "prices.html"
+       =================================== END ======================================= */
+
 }
 
 @media (max-width: 1200px) {
@@ -3087,12 +3261,12 @@ footer .social_menu {
         right: 50%;
     }
 
-    /* block "medicine", page "med.html"
+    /* section "medicine", page "med.html"
    =================================== BEGINNING ======================================= */
     .medicine .medicine_block {
         width: 33.33333333%;
     }
-    /* block "medicine", page "med.html"
+    /* section "medicine", page "med.html"
    =================================== END ====================================== */
 
 }
