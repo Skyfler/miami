@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>MiamiBirth</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.min.css">
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoBwiZTQbw3fmz_HQFX3Ji7NXNOmAhdOo"></script>
-    <script defer src="build.js"></script>
+    <script defer src="js/build.js"></script>
     <!--[if lt IE 9]>
     <script src="js/css3-mediaqueries.js"></script>
     <script src="js/html5shiv.js"></script><
@@ -43,17 +43,17 @@
 <div class="header_line"></div>
 <nav class="closed collapsed menu" id="main_menu">
     <div class="btn_panel">
-        <button class="nav_bar_toggle" data-component="nav_bar_toggle">
+        <button class="dropdown_toggle" data-component="dropdown_toggle">
             <div></div>
             <div></div>
             <div></div>
         </button>
     </div>
-    <div class="nav_bar_container">
-        <ul class="nav_bar">
+    <div class="dropdown_container">
+        <ul class="dropdown_bar">
             <li><a href="index.html">Главная</a></li>
             <li class="closed collapsed" data-component="submenu_container" data-state="closed">
-                <a href="article.html" data-component="submenu_toggle">О нас</a>
+                <a href="about_us.html" data-component="submenu_toggle">О нас</a>
                 <div class="submenu_bar">
                     <ul class="submenu" data-component="submenu">
                         <li><a href="#">Почему мы?</a></li>
@@ -104,29 +104,174 @@
     </div>
 </div>
 <section class="prices">
+    <div class="decor_circle_1"></div>
+    <div class="decor_circle_2"></div>
     <div class="container">
-        <div class="decor_circle_1"></div>
-        <div class="decor_circle_2"></div>
         <h2 class="block_main_title">Цены</h2>
         <div class="block_description">Aenean sollicitudin, lorem quis bibendum</div>
         <div class="divider"></div>
         <div class="row clr">
-            <div class="block_content">
+            <article class="block_content">
                 <div class="decor_container">
                     <div class="decor_circle_3"></div>
                     <div class="decor_circle_4"></div>
                 </div>
                 <h3 class="title">Доктор Светлана Масляк
                     <br>Svetlana Maslyak</h3>
-                <p class="text">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
-                    <br><br>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent.
+                <p class="text">
+                    Доктор Svatlana Maslyak (Светлана Масляк) - американский акушер-гинеколог высшей категории украинского происхождения. Свободно говорит на украинском и русском языках. Первое медицинское образование получила в Ивано-Франковской медицинской академии, второе в Медицинском Университете в Нью-Джерси по специальности акушер-гинеколог. Самый известный и востребованный рускоязычный гинеколог в Майами с опытом работы в США более 20 лет.
+                    <br><br>Светлана Масляк сторонник натуральных родов.
                 </p>
-            </div>
+            </article>
             <div class="img_block">
                 <div class="img_placeholder"></div>
                 <div class="img_container">
                     <img class="responsive_img" src="img/prices_img.jpg" alt="">
                 </div>
+            </div>
+        </div>
+        <article class="specializations">
+            <div class="title">Основные направления специализации доктора Светлана Масляк:</div>
+            <ul class="spec_list">
+                <li>Осложненные естественные роды с факторами высокого риска, требующие высокой квалификации акушера-гинеколога.</li>
+                <li>Ведение беременностей повышенного риска (многоплодные беременности, беременности с различными патологиями, диабет, гормональные отклонения и тд).</li>
+                <li>Операции кесарева сечения с минимальным сроком восстановления после операции. Доктор работает с уникальными методиками операциии медикаментозного лечения для минимализации осложнений и ускорения заживления.</li>
+            </ul>
+            <div class="text">Доктор Светлана Масляк принимает роды в <a href="#">Memorial Regional Hospital</a>.</div>
+        </article>
+    </div>
+    <div class="open dropdown" id="package_offers">
+        <div class="btn_panel container">
+            <a class="dropdown_toggle" data-component="dropdown_toggle">
+                <div class="btn_decor">
+                    <div></div>
+                    <div></div>
+                </div>
+                Пакетные предложения
+            </a>
+        </div>
+        <div class="dropdown_container container">
+            <div class="dropdown_bar">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Программы</td>
+                            <td>Минимум</td>
+                            <td>Оптимум</td>
+                            <td>Максимум</td>
+                        </tr>
+                        <tr>
+                            <td>Услуги</td>
+                            <td>
+                                <sup>$</sup>1599
+                                <div class="decor_traingle"></div>
+                                </td>
+                            <td>
+                                <sup>$</sup>3599
+                                <div class="decor_traingle"></div>
+                            </td>
+                            <td>
+                                <sup>$</sup>7599
+                                <div class="decor_traingle"></div>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Детальная консультация касательно всех аспектов родов в США</td>
+                            <td><span class="point"></span></td>
+                            <td><span class="point"></span></td>
+                            <td><span class="point"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Консультация и помощь в оформлении страховки для Мамы её сопровождающих</td>
+                            <td></td>
+                            <td><span class="point"></span></td>
+                            <td><span class="point"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Подбор и оформление договора аренды выбранных апартаментов</td>
+                            <td></td>
+                            <td><span class="point"></span></td>
+                            <td><span class="point"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Подбор и оформление аренды авто</td>
+                            <td></td>
+                            <td><span class="point"></span></td>
+                            <td><span class="point"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Перевод стандартного пакета медицинских документов и анализов на английский язык</td>
+                            <td></td>
+                            <td><span class="point"></span></td>
+                            <td><span class="point"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Детальная консультация касательно всех аспектов родов в США</td>
+                            <td></td>
+                            <td><span class="point"></span></td>
+                            <td><span class="point"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Детальная консультация касательно всех аспектов родов в США</td>
+                            <td></td>
+                            <td><span class="point"></span></td>
+                            <td><span class="point"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Детальная консультация касательно всех аспектов родов в США</td>
+                            <td></td>
+                            <td><span class="point"></span></td>
+                            <td><span class="point"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="closed colapsed dropdown" id="additional_services">
+        <div class="btn_panel container">
+            <a class="dropdown_toggle" data-component="dropdown_toggle">
+                <div class="btn_decor">
+                    <div></div>
+                    <div></div>
+                </div>
+                Допольнительные услуги
+            </a>
+        </div>
+        <div class="dropdown_container container">
+            <div class="dropdown_bar">
+                <table>
+                    <thead>
+                        <tr>
+                            <td><div>Услуги</div></td>
+                            <td><div>Цена, $</div></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-title="Услуга">Детальная консультация касательно всех аспектов родов в США</td>
+                            <td data-title="Цена, $">200</td>
+                        </tr>
+                        <tr>
+                            <td data-title="Услуга">Консультация и помощь в оформлении страховки для Мамы её сопровождающих</td>
+                            <td data-title="Цена, $">300</td>
+                        </tr>
+                        <tr>
+                            <td data-title="Услуга">Подбор и оформление договора аренды выбранных апартаментов</td>
+                            <td data-title="Цена, $">1500</td>
+                        </tr>
+                        <tr>
+                            <td data-title="Услуга">Подбор и оформление аренды авто</td>
+                            <td data-title="Цена, $">200</td>
+                        </tr>
+                        <tr>
+                            <td data-title="Услуга">Перевод стандартного пакета медицинских документов и анализов на английский язык</td>
+                            <td data-title="Цена, $">200</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -135,14 +280,14 @@
 <footer class="container clr">
     <nav class="closed collapsed menu" id="footer_menu">
         <div class="btn_panel">
-            <button class="nav_bar_toggle" data-component="nav_bar_toggle">
+            <button class="dropdown_toggle" data-component="dropdown_toggle">
                 <div></div>
                 <div></div>
                 <div></div>
             </button>
         </div>
-        <div class="nav_bar_container">
-            <ul class="nav_bar">
+        <div class="dropdown_container">
+            <ul class="dropdown_bar">
                 <li><a href="#">Главная</a></li>
                 <li><a href="#">О нас</a></li>
                 <li><a href="#">Услуги</a></li>

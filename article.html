@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>MiamiBirth</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.min.css">
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoBwiZTQbw3fmz_HQFX3Ji7NXNOmAhdOo"></script>
-    <script defer src="build.js"></script>
+    <script defer src="js/build.js"></script>
     <!--[if lt IE 9]>
     <script src="js/css3-mediaqueries.js"></script>
     <script src="js/html5shiv.js"></script><
@@ -43,14 +43,14 @@
 <div class="header_line"></div>
 <nav class="closed collapsed menu" id="main_menu">
     <div class="btn_panel">
-        <button class="nav_bar_toggle" data-component="nav_bar_toggle">
+        <button class="dropdown_toggle" data-component="dropdown_toggle">
             <div></div>
             <div></div>
             <div></div>
         </button>
     </div>
-    <div class="nav_bar_container">
-        <ul class="nav_bar">
+    <div class="dropdown_container">
+        <ul class="dropdown_bar">
             <li><a href="index.html">Главная</a></li>
             <li class="closed collapsed" data-component="submenu_container" data-state="closed">
                 <a href="#" data-component="submenu_toggle">О нас</a>
@@ -119,14 +119,14 @@
 <footer class="container clr">
     <nav class="closed collapsed menu" id="footer_menu">
         <div class="btn_panel">
-            <button class="nav_bar_toggle" data-component="nav_bar_toggle">
+            <button class="dropdown_toggle" data-component="dropdown_toggle">
                 <div></div>
                 <div></div>
                 <div></div>
             </button>
         </div>
-        <div class="nav_bar_container">
-            <ul class="nav_bar">
+        <div class="dropdown_container">
+            <ul class="dropdown_bar">
                 <li><a href="#">Главная</a></li>
                 <li><a href="#">О нас</a></li>
                 <li><a href="#">Услуги</a></li>

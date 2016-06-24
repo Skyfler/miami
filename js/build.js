@@ -48,8 +48,9 @@
 	    "use strict";
 	    
 	    __webpack_require__(1);
-	    var Menu = __webpack_require__(2);
-	    var Slider = __webpack_require__(3);
+	    var Dropdown = __webpack_require__(2);
+	    var Menu = __webpack_require__(3);
+	    var Slider = __webpack_require__(4);
 	    
 	    var mainMenu = new Menu({
 	        elem: document.querySelector('#main_menu')
@@ -60,7 +61,7 @@
 	
 	    var sliderElem = document.querySelector('#slider');
 	    if (sliderElem) {
-	        var map = new Slider({
+	        var slider = new Slider({
 	            elem: sliderElem,
 	            delay: 4000
 	        });
@@ -68,15 +69,28 @@
 	
 	    var carouselElem = document.querySelector('#carousel');
 	    if (carouselElem) {
-	        var map = new Slider({
+	        var carousel = new Slider({
 	            elem: carouselElem,
 	            delay: 0
 	        });
 	    }
+	
+	    var packageOffersElem = document.querySelector('#package_offers');
+	    if (packageOffersElem) {
+	        var packageOffers = new Dropdown({
+	            elem: packageOffersElem
+	        });
+	    }
+	
+	    var additionalServicesElem = document.querySelector('#additional_services');
+	    if (additionalServicesElem) {
+	        var additionalServices = new Dropdown({
+	            elem: additionalServicesElem
+	        });
+	    }
 	    
 	    var mapElem = document.querySelector('#map_container>.map');
-	    if (!mapElem) {
-	    } else {
+	    if (mapElem) {
 	        var map = new google.maps.Map(mapElem, {
 	            zoom: 16,
 	            center: {lat: 49.99335, lng: 36.23237},
@@ -540,50 +554,78 @@
 
 	"use strict";
 	
-	function Menu(options) {
+	function Dropdown(options) {
 	    this._elem = options.elem;
-	    this._openBtn = this._elem.querySelector('[data-component="nav_bar_toggle"]');
-	    this._state = 'closed';
-	    
+	    this._openBtn = this._elem.querySelector('[data-component="dropdown_toggle"]');
+	    if (this._elem.classList.contains('open')) {
+	        this._state = 'open';
+	    } else {
+	        this._state = 'closed';
+	    }
+	
 	    this._elem.addEventListener('click', this._onClick.bind(this));
 	}
 	
-	Menu.prototype._onClick = function(e) {
+	Dropdown.prototype._onClick = function(e) {
+	    e.preventDefault();
 	    var target = e.target;
 	
-	    this._toggleMenu.bind(this)(target);
-	    this._toggleSubMenu.bind(this)(target);
+	    this._toggleDropdown.bind(this)(target);
 	};
 	
-	Menu.prototype._toggleMenu = function(target) {
+	Dropdown.prototype._toggleDropdown = function(target) {
 	    if (this._openBtn.contains(target)) {
 	        if (this._state === 'closed') {
-	            this._openMenu.bind(this)();
+	            this._openDropdown.bind(this)();
 	        } else {
-	            this._closeMenu.bind(this)();
+	            this._closeDropdown.bind(this)();
 	        }
 	    }
 	};
 	
-	Menu.prototype._openMenu = function() {
-	    var navBarContainer = this._elem.querySelector('.nav_bar_container');
-	    var navBar = navBarContainer.querySelector('.nav_bar');
-	    
+	Dropdown.prototype._openDropdown = function() {
+	    var dropdownContainer = this._elem.querySelector('.dropdown_container');
+	    var dropdownBar = dropdownContainer.querySelector('.dropdown_bar');
+	
 	    this._state = 'open';
 	    this._elem.classList.add('open');
 	    this._elem.classList.remove('closed');
-	    navBarContainer.style.height = navBar.offsetHeight + 'px';
+	    dropdownContainer.style.height = dropdownBar.offsetHeight + 'px';
 	    this._elem.classList.remove('collapsed');
 	    setTimeout(function(){
-	        navBarContainer.style.height = '';
+	        dropdownContainer.style.height = '';
 	    }, 500);
 	};
 	
-	Menu.prototype._closeMenu = function() {
+	Dropdown.prototype._closeDropdown = function() {
 	    this._state = 'closed';
 	    this._elem.classList.add('closed');
 	    this._elem.classList.remove('open');
 	    this._elem.classList.add('collapsed');
+	};
+	
+	module.exports = Dropdown;
+
+/***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var Dropdown = __webpack_require__(2);
+	
+	function Menu(options) {
+	    Dropdown.call(this, options);
+	}
+	
+	Menu.prototype = Object.create(Dropdown.prototype);
+	Menu.prototype.constructor = Menu;
+	
+	Menu.prototype._onClick = function(e) {
+	    var target = e.target;
+	
+	    this._toggleDropdown.bind(this)(target);
+	    this._toggleSubMenu.bind(this)(target);
 	};
 	
 	Menu.prototype._toggleSubMenu = function(target) {
@@ -624,7 +666,7 @@
 	module.exports = Menu;
 
 /***/ },
-/* 3 */
+/* 4 */
 /***/ function(module, exports) {
 
 	"use strict";

@@ -2,6 +2,7 @@
     "use strict";
     
     require('./polyfils.js');
+    var Dropdown = require('./dropdown.js');
     var Menu = require('./menu.js');
     var Slider = require('./slider.js');
     
@@ -14,7 +15,7 @@
 
     var sliderElem = document.querySelector('#slider');
     if (sliderElem) {
-        var map = new Slider({
+        var slider = new Slider({
             elem: sliderElem,
             delay: 4000
         });
@@ -22,15 +23,28 @@
 
     var carouselElem = document.querySelector('#carousel');
     if (carouselElem) {
-        var map = new Slider({
+        var carousel = new Slider({
             elem: carouselElem,
             delay: 0
         });
     }
+
+    var packageOffersElem = document.querySelector('#package_offers');
+    if (packageOffersElem) {
+        var packageOffers = new Dropdown({
+            elem: packageOffersElem
+        });
+    }
+
+    var additionalServicesElem = document.querySelector('#additional_services');
+    if (additionalServicesElem) {
+        var additionalServices = new Dropdown({
+            elem: additionalServicesElem
+        });
+    }
     
     var mapElem = document.querySelector('#map_container>.map');
-    if (!mapElem) {
-    } else {
+    if (mapElem) {
         var map = new google.maps.Map(mapElem, {
             zoom: 16,
             center: {lat: 49.99335, lng: 36.23237},

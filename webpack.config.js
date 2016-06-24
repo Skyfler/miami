@@ -3,9 +3,9 @@
 var webpack = require('webpack');
 
 module.exports = {
-  entry: "./js/page.js",
+  entry: "./js/filesToBuild/page.js",
   output: {
-    path: __dirname,
+    path: __dirname + "/js",
     filename: "build.js"
   },
 
