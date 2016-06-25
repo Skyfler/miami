@@ -2816,7 +2816,7 @@ footer .social_menu {
     background: #9fe0fe;
 }
 
-@media (max-width: 365px) {
+@media (max-width: 364px) {
 
     /* section "contact_us", page "index.html"
    =================================== BEGINNING ======================================= */
@@ -3006,7 +3006,7 @@ footer .social_menu {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
     /* section "contact_us", page "index.html"
    =================================== BEGINNING ======================================= */
@@ -3018,7 +3018,7 @@ footer .social_menu {
 
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
 
     /* section "prices", page "prices.html"
    =================================== BEGINNING ======================================= */
@@ -3936,7 +3936,7 @@ footer .social_menu {
 
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
 
     .full_width_md {
         width: 100%!important;
