@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <title>MiamiBirth</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <link rel="stylesheet" href="styles/style.min.css">
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoBwiZTQbw3fmz_HQFX3Ji7NXNOmAhdOo"></script>
     <script defer src="js/build.js"></script>
     <!--[if lt IE 9]>
     <script src="js/css3-mediaqueries.js"></script>
-    <script src="js/html5shiv.js"></script><
+    <script src="js/aight.min.js"></script>
     <![endif]-->
 </head>
 <body>
@@ -70,6 +71,7 @@
                         <li><a href="#">Госпитали и больницы в США</a></li>
                         <li><a href="#">Педиатрия</a></li>
                         <li><a href="#">Неонатологи</a></li>
+                        <div class="clearfix hidden_1390"></div>
                         <li><a href="#">Стволовые Клетки</a></li>
                         <li><a href="#">Курсы перед родами</a></li>
                         <li><a href="#">Йога для беременных</a></li>
@@ -84,13 +86,27 @@
                         <li><a href="#">Роды</a></li>
                         <li><a href="#">Документы</a></li>
                         <li><a href="#">Подбор Жилья</a></li>
+                        <div class="clearfix hidden_1020"></div>
                         <li><a href="#">Аренда Авто</a></li>
                         <li><a href="#">Помощь в Открытии Бизнеса</a></li>
                     </ul>
                 </div>
             </li>
             <li><a href="#">Цены</a></li>
-            <li><a href="#">Важная информация</a></li>
+            <li class="closed collapsed" data-component="submenu_container" data-state="closed">
+                <a href="important.html" data-component="submenu_toggle">Важная информация</a>
+                <div class="submenu_bar">
+                    <ul class="submenu" data-component="submenu">
+                        <li><a href="#">О стране</a></li>
+                        <li><a href="#">Планирование поездки</a></li>
+                        <li><a href="#">Второе гражданство</a></li>
+                        <div class="clearfix hidden_1135"></div>
+                        <li><a href="#">Иммиграция</a></li>
+                        <li><a href="#">Отдых в США и не только</a></li>
+                        <li><a href="#">Наши партнеры</a></li>
+                    </ul>
+                </div>
+            </li>
             <li><a href="contacts.html">Контакты</a></li>
         </ul>
     </div>
