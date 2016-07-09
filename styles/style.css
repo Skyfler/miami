@@ -1058,19 +1058,19 @@ ul {
 }
 
 .we_are_the_best .selectable_blocks_container .selectable_block.first .block_icon {
-    background-position: 0 0;
+    background-position: -800px -95px;
 }
 
 .we_are_the_best .selectable_blocks_container .selectable_block.second .block_icon {
-    background-position: -126px 0;
+    background-position: -800px -175px;
 }
 
 .we_are_the_best .selectable_blocks_container .selectable_block.third .block_icon {
-    background-position: -252px 0;
+    background-position: -800px -255px;
 }
 
 .we_are_the_best .selectable_blocks_container .selectable_block.fourth .block_icon {
-    background-position: -378px 0;
+    background-position: -800px -335px;
 }
 
 .we_are_the_best .selectable_blocks_container .selectable_block .block_text {
@@ -1218,7 +1218,30 @@ ul {
     margin: 0 auto;
     padding: 22px 10px;
     position: relative;
-    background: url('../img/img4.jpg') no-repeat center center;
+}
+
+.our_services .service_block.visa_in_usa .service_block_content {
+    background: #5bd3ff;
+}
+
+.our_services .service_block.birth .service_block_content {
+    background: #ff5c7c;
+}
+
+.our_services .service_block.documents_services .service_block_content {
+    background: #00aeff;
+}
+
+.our_services .service_block.finding_a_house .service_block_content {
+    background: #ff5c7c;
+}
+
+.our_services .service_block.rent_a_car .service_block_content {
+    background: #00aeff;
+}
+
+.our_services .service_block.help_in_business .service_block_content {
+    background: #5bd3ff;
 }
 
 .our_services .service_block .service_block_content .bg_layer {
@@ -1227,44 +1250,76 @@ ul {
     height: 100%;
     top: 0;
     left: 0;
+    background-size: auto 100%;
+    background-position: center center;
 }
 
-.our_services .service_block.birth_in_usa .service_block_content .bg_layer  {
-    background: rgb(5, 187, 231);
-    opacity: 0.47;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=47)";  /* IE 8 */
+.our_services .service_block.visa_in_usa .service_block_content .bg_layer  {
+    background-image: url('../img/services/visa_1.jpg');
+    opacity: 0.30;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";  /* IE 8 */
 }
 
-.our_services .service_block.treatment_in_usa .service_block_content .bg_layer  {
-    background: rgb(255, 92, 124);
-    opacity: 0.47;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=47)";  /* IE 8 */
+.our_services .service_block.birth .service_block_content .bg_layer  {
+    background-image: url('../img/services/birth_1.jpg');
+    opacity: 0.30;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";  /* IE 8 */
 }
 
-.our_services .service_block.documents .service_block_content .bg_layer  {
-    background: rgb(0, 174, 255);
-    opacity: 0.47;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=47)";  /* IE 8 */
+.our_services .service_block.documents_services .service_block_content .bg_layer  {
+    background-image: url('../img/services/documents_2.jpg');
+    opacity: 0.30;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";  /* IE 8 */
+}
+
+.our_services .service_block.finding_a_house .service_block_content .bg_layer  {
+    background-image: url('../img/services/housing_2.jpg');
+    opacity: 0.30;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";  /* IE 8 */
+}
+
+.our_services .service_block.rent_a_car .service_block_content .bg_layer  {
+    background-image: url('../img/services/car_1.jpg');
+    opacity: 0.30;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";  /* IE 8 */
+}
+
+.our_services .service_block.help_in_business .service_block_content .bg_layer  {
+    background-image: url('../img/services/business_3.jpg');
+    opacity: 0.30;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";  /* IE 8 */
 }
 
 .our_services .service_block .service_block_content .block_icon {
-    width: 86px;
-    height: 89px;
+    width: 134px;
+    height: 96px;
     background-image: url('../img/sprite.svg');
     margin: 0 auto 7px;
     position: relative;
 }
 
-.our_services .service_block.birth_in_usa .service_block_content .block_icon {
-    background-position: -504px 0;
+.our_services .service_block.visa_in_usa .service_block_content .block_icon {
+    background-position: 0 -288px;
 }
 
-.our_services .service_block.treatment_in_usa .service_block_content .block_icon  {
-    background-position: -590px 0;
+.our_services .service_block.birth .service_block_content .block_icon  {
+    background-position: -134px -288px;
 }
 
-.our_services .service_block.documents .service_block_content .block_icon  {
-    background-position: -676px 0;
+.our_services .service_block.documents_services .service_block_content .block_icon  {
+    background-position: -268px -288px;
+}
+
+.our_services .service_block.finding_a_house .service_block_content .block_icon {
+    background-position: -402px -288px;
+}
+
+.our_services .service_block.rent_a_car .service_block_content .block_icon  {
+    background-position: -534px -288px;
+}
+
+.our_services .service_block.help_in_business .service_block_content .block_icon  {
+    background-position: -668px -288px;
 }
 
 .our_services .service_block .service_block_content .block_title {
@@ -1303,15 +1358,27 @@ ul {
     transition: background-color ease 0.5s, color ease 0.5s, border-color ease 0.5s;
 }
 
-.our_services .service_block.birth_in_usa .service_block_content .details:hover {
+.our_services .service_block.visa_in_usa .service_block_content .details:hover {
     background-color: rgb(231, 146, 150);
 }
 
-.our_services .service_block.treatment_in_usa .service_block_content .details:hover {
+.our_services .service_block.birth .service_block_content .details:hover {
     background-color: rgb(113, 200, 230);
 }
 
-.our_services .service_block.documents .service_block_content .details:hover {
+.our_services .service_block.documents_services .service_block_content .details:hover {
+    background-color: rgb(231, 146, 150);
+}
+
+.our_services .service_block.finding_a_house .service_block_content .details:hover {
+    background-color: rgb(113, 200, 230);
+}
+
+.our_services .service_block.rent_a_car .service_block_content .details:hover {
+    background-color: rgb(231, 146, 150);
+}
+
+.our_services .service_block.help_in_business .service_block_content .details:hover {
     background-color: rgb(231, 146, 150);
 }
 /* section "our_services", page "index.html"
@@ -1365,27 +1432,27 @@ ul {
 }
 
 .services .service_block.visa_in_usa .service_block_content .block_icon {
-    background-position: 0 -186px;
+    background-position: 0 -96px;
 }
 
 .services .service_block.birth .service_block_content .block_icon  {
-    background-position: -134px -186px;
+    background-position: -134px -96px;
 }
 
 .services .service_block.documents_services .service_block_content .block_icon  {
-    background-position: -268px -186px;
+    background-position: -268px -96px;
 }
 
 .services .service_block.finding_a_house .service_block_content .block_icon {
-    background-position: -402px -186px;
+    background-position: -402px -96px;
 }
 
 .services .service_block.rent_a_car .service_block_content .block_icon  {
-    background-position: -534px -186px;
+    background-position: -534px -96px;
 }
 
 .services .service_block.help_in_business .service_block_content .block_icon  {
-    background-position: -668px -186px;
+    background-position: -668px -96px;
 }
 
 .services .service_block .service_block_content .block_title {
@@ -1507,27 +1574,27 @@ ul {
 }
 
 .important_info .important_info_block.about_country .important_info_block_content .block_icon {
-    background-position: 0 -282px;
+    background-position: 0 -192px;
 }
 
 .important_info .important_info_block.trip_planning .important_info_block_content .block_icon {
-    background-position: -134px -282px;
+    background-position: -134px -192px;
 }
 
 .important_info .important_info_block.second_citizenship .important_info_block_content .block_icon {
-    background-position: -268px -282px;
+    background-position: -268px -192px;
 }
 
 .important_info .important_info_block.immigration .important_info_block_content .block_icon {
-    background-position: -402px -282px;
+    background-position: -402px -192px;
 }
 
 .important_info .important_info_block.vacation_in_usa .important_info_block_content .block_icon {
-    background-position: -534px -282px;
+    background-position: -534px -192px;
 }
 
 .important_info .important_info_block.our_partners .important_info_block_content .block_icon {
-    background-position: -668px -282px;
+    background-position: -668px -192px;
 }
 
 .important_info .important_info_block .important_info_block_content .block_title {
@@ -1599,69 +1666,6 @@ ul {
     background: url('../img/info/our_partners.jpg');
 }
 /* section "important_info", page "important.html"
-   =================================== END ======================================= */
-
-/* class "flip-container", (section "important_info") page "important.html"
-    (section "services") page "services.html" (section "medicine") page "med.html"
-   =================================== BEGINNING ======================================= */
-@media (min-width: 768px) {
-
-    /* entire container, keeps perspective */
-    .flip-container {
-        perspective: 1000px;
-        transform-style: preserve-3d;
-    }
-    /*  UPDATED! flip the pane when hovered */
-    .flip-container:hover .back {
-        transform: rotateY(0deg);
-    }
-    .flip-container:hover .front {
-        transform: rotateY(180deg);
-    }
-
-    .flip-container, .front, .back  {
-        height: 220px!important;
-    }
-
-    .front, .back {
-        width: 320px!important;
-    }
-
-        /* flip speed goes here */
-    .flipper {
-        width: 320px!important;
-        height: 220px!important;
-        min-height: 220px!important;
-        transition: transform ease 0.6s;
-        transform-style: preserve-3d;
-
-        position: relative;
-    }
-
-    /* hide back of pane during swap */
-    .front, .back {
-        backface-visibility: hidden;
-        transition: 0.6s;
-        transform-style: preserve-3d;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    /*  UPDATED! front pane, placed above back */
-    .front {
-        z-index: 2;
-        transform: rotateY(0deg);
-    }
-
-    /* back, initially hidden pane */
-    .back {
-        transform: rotateY(-180deg);
-    }
-
-}
-/* class "flip-container", (section "important_info") page "important.html"
-    (section "services") page "services.html" (section "medicine") page "med.html"
    =================================== END ======================================= */
 
 /* section "reviews", page "index.html"
@@ -2368,31 +2372,31 @@ ul {
 }
 
 .medicine .medicine_block.gynecology .medicine_block_content .block_icon {
-    background-position: 0 -90px;
+    background-position: 0 0;
 }
 
 .medicine .medicine_block.hospitals .medicine_block_content .block_icon {
-    background-position: -134px -90px;
+    background-position: -134px 0;
 }
 
 .medicine .medicine_block.pediatry .medicine_block_content .block_icon {
-    background-position: -268px -90px;
+    background-position: -268px 0;
 }
 
 .medicine .medicine_block.neonatology .medicine_block_content .block_icon {
-    background-position: -402px -90px;
+    background-position: -402px 0;
 }
 
 .medicine .medicine_block.stem_cells .medicine_block_content .block_icon {
-    background-position: -534px -90px;
+    background-position: -534px 0;
 }
 
 .medicine .medicine_block.courses .medicine_block_content .block_icon {
-    background-position: -668px -90px;
+    background-position: -668px 0;
 }
 
 .medicine .medicine_block.yoga .medicine_block_content .block_icon {
-    background-position: -802px -90px;
+    background-position: -802px -0;
 }
 
 .medicine .medicine_block .medicine_block_content .block_title {
@@ -3474,6 +3478,65 @@ footer .social_menu {
     /* class "slider", (div "#slider", div "#carousel") page "index.html"
    =================================== END ======================================= */
 
+    /* class "flip-container", (section "important_info") page "important.html"
+    (section "services") page "services.html" (section "medicine") page "med.html"
+   =================================== BEGINNING ======================================= */
+    /* entire container, keeps perspective */
+    .flip-container {
+        perspective: 1000px;
+        transform-style: preserve-3d;
+    }
+    /*  UPDATED! flip the pane when hovered */
+    .flip-container .flipper:hover .back {
+        transform: rotateY(0deg);
+    }
+    .flip-container .flipper:hover .front {
+        transform: rotateY(180deg);
+    }
+
+    .flip-container, .front, .back  {
+        height: 220px!important;
+    }
+
+    .front, .back {
+        width: 320px!important;
+    }
+
+    /* flip speed goes here */
+    .flipper {
+        width: 320px!important;
+        height: 220px!important;
+        min-height: 220px!important;
+        transition: transform ease 0.6s;
+        transform-style: preserve-3d;
+
+        position: relative;
+    }
+
+    /* hide back of pane during swap */
+    .front, .back {
+        backface-visibility: hidden;
+        transition: 0.6s;
+        transform-style: preserve-3d;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    /*  UPDATED! front pane, placed above back */
+    .front {
+        z-index: 2;
+        transform: rotateY(0deg);
+    }
+
+    /* back, initially hidden pane */
+    .back {
+        transform: rotateY(-180deg);
+    }
+    /* class "flip-container", (section "important_info") page "important.html"
+        (section "services") page "services.html" (section "medicine") page "med.html"
+       =================================== END ======================================= */
+
     /* div "#slider", page "index.html"
    =================================== BEGINNING ======================================= */
     #slider.slider img {
@@ -4311,7 +4374,7 @@ footer .social_menu {
         width: 50%;
     }
 
-    .our_services .service_block.documents {
+    .our_services .clearfix ~ .service_block {
         padding-top: calc((100% - 804px) / 2);
     }
     /* section "our_services", page "index.html"
@@ -4536,10 +4599,7 @@ footer .social_menu {
    =================================== BEGINNING ======================================= */
     .our_services .service_block {
         width: 33.33333333%;
-    }
-
-    .our_services .service_block.documents {
-        padding-top: 10px;
+        padding-top: 10px!important;
     }
     /* section "our_services", page "index.html"
    =================================== END ======================================= */
