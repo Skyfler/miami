@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     htmlmin = require('gulp-htmlmin'),
     browserSync = require("browser-sync"),
     rimraf = require('rimraf'),
+    uglify = require('gulp-uglify'),
     rename = require('gulp-rename');
 
 var config = {
@@ -29,15 +30,16 @@ var path = {
     },
     dev: { //Пути откуда брать исходники
         html: './dev/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
-        js: './dev/js/main.js',//В стилях и скриптах нам понадобятся только main файлы
-        style: './dev/css/style.css',
+        js: './dev/scripts/page.js',//В стилях и скриптах нам понадобятся только main файлы
+        jsie: './dev/scripts/ie/*',
+        css: './dev/css/*.css',
         img: './dev/img/used/**/*.*' //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
     },
     clean: './public'
 };
 
 gulp.task('webpack', function() {
-    return gulp.src('./dev/scripts/page.js')
+    gulp.src(path.dev.js)
         .pipe(gulpWebpack({
             output: {
                 filename: "build.min.js"
@@ -46,14 +48,22 @@ gulp.task('webpack', function() {
                 new webpack.optimize.UglifyJsPlugin({minimize: true})
             ]
         }, webpack))
-        .pipe(gulp.dest('./public/scripts/'));
+        .pipe(gulp.dest(path.public.js));
 });
 
+gulp.task('jsIe', function () {
+    gulp.src(path.dev.jsie)
+        .pipe(uglify())
+        .pipe(gulp.dest(path.public.js));
+});
+
+gulp.task('js', ['webpack', 'jsIe']);
+
 gulp.task('css', function () {
-    gulp.src('./dev/css/*.css')
+    gulp.src(path.dev.css)
         .pipe(cssmin())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('./public/css/'));
+        .pipe(gulp.dest(path.public.css));
 });
 
 gulp.task('image', function () {
@@ -88,4 +98,4 @@ gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
 });
 
-gulp.task('default', ['html', 'css', 'webpack', 'image']);
+gulp.task('default', ['html', 'css', 'js', 'image']);
