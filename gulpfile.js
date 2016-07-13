@@ -26,14 +26,16 @@ var path = {
         html: './public/',
         js: './public/scripts/',
         css: './public/css/',
-        img: './public/img/'
+        img: './public/img/',
+        pie: './public/pie/'
     },
     dev: { //Пути откуда брать исходники
         html: './dev/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
         js: './dev/scripts/page.js',//В стилях и скриптах нам понадобятся только main файлы
         jsie: './dev/scripts/ie/*',
         css: './dev/css/*.css',
-        img: './dev/img/used/**/*.*' //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+        img: './dev/img/used/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+        pie: './dev/pie/*'
     },
     clean: './public'
 };
@@ -64,16 +66,22 @@ gulp.task('css', function () {
         .pipe(cssmin())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(path.public.css));
+
 });
 
 gulp.task('image', function () {
-    return gulp.src(path.dev.img)
+    gulp.src(path.dev.img)
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()]
         }))
         .pipe(gulp.dest(path.public.img));
+});
+
+gulp.task('pie', function () {
+    gulp.src(path.dev.pie)
+        .pipe(gulp.dest(path.public.pie));
 });
 
 gulp.task('html', function() {
@@ -98,4 +106,4 @@ gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
 });
 
-gulp.task('default', ['html', 'css', 'js', 'image']);
+gulp.task('default', ['html', 'css', 'js', 'pie', 'image']);
