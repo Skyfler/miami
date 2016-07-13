@@ -673,9 +673,9 @@ ul {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
-        behavior: url(/pie/PIE.htc);
+        behavior: url(/public/pie/PIE.htc);
         position: relative;
-        background: url('../img/sprite_socmenu_contacts.png');
+        background: url('../img/sprites/sprite_socmenu_contacts.png');
     }
 
     .social_menu .facebook a {
@@ -919,7 +919,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     position: absolute;
     top: 0;
     left: 0;
@@ -934,7 +934,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     position: absolute;
     top: 5px;
     left: 0;
@@ -951,7 +951,7 @@ ul {
     -webkit-border-radius: 19px;
     -moz-border-radius: 19px;
     border-radius: 19px;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     position:relative;
     border: 2px solid #5bd3ff;
     margin-top: 30px;
@@ -984,7 +984,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     background: rgb(162, 233, 246);
     opacity: 0.3;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";  /* IE 8 */
@@ -999,7 +999,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     background: rgb(162, 233, 246);
     opacity: 0.8;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";  /* IE 8 */
@@ -1052,7 +1052,7 @@ ul {
 }
 
 .we_are_the_best .selectable_blocks_container .selectable_block .block_icon {
-    background: url('../img/sprite.svg') no-repeat;
+    background: url('../img/sprites/sprite.svg') no-repeat;
     width: 126px;
     height: 80px;
     margin: 0 auto;
@@ -1105,7 +1105,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     position: absolute;
 }
 
@@ -1120,7 +1120,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     position: absolute;
 }
 
@@ -1135,7 +1135,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     position: absolute;
 }
 
@@ -1150,7 +1150,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     position: absolute;
 }
 /* section "we_are_the_best", page "index.html"
@@ -1189,7 +1189,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     position: absolute;
     border: 3px solid #bde7f1;
 }
@@ -1202,7 +1202,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     position: absolute;
     border: 2px solid #bde7f1;
 }
@@ -1294,7 +1294,7 @@ ul {
 .our_services .service_block .service_block_content .block_icon {
     width: 134px;
     height: 96px;
-    background-image: url('../img/sprite.svg');
+    background-image: url('../img/sprites/sprite.svg');
     margin: 0 auto 7px;
     position: relative;
 }
@@ -1352,7 +1352,7 @@ ul {
     -webkit-border-radius: 19px;
     -moz-border-radius: 19px;
     border-radius: 19px;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     border: 2px solid #fff;
     margin-top: 25px;
     position: relative;
@@ -1427,7 +1427,7 @@ ul {
 .services .service_block .service_block_content .block_icon {
     width: 134px;
     height: 96px;
-    background-image: url('../img/sprite.svg');
+    background-image: url('../img/sprites/sprite.svg');
     margin: 0 auto 7px;
     position: relative;
 }
@@ -1485,7 +1485,7 @@ ul {
     -webkit-border-radius: 19px;
     -moz-border-radius: 19px;
     border-radius: 19px;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     border: 2px solid #5bd3ff;
     margin-top: 25px;
     position: relative;
@@ -1569,7 +1569,7 @@ ul {
 .important_info .important_info_block .important_info_block_content .block_icon {
     width: 134px;
     height: 96px;
-    background-image: url('../img/sprite.svg');
+    background-image: url('../img/sprites/sprite.svg');
     margin: 0 auto 7px;
     position: relative;
 }
@@ -1627,7 +1627,7 @@ ul {
     -webkit-border-radius: 19px;
     -moz-border-radius: 19px;
     border-radius: 19px;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     border: 2px solid #5bd3ff;
     margin-top: 25px;
     position: relative;
@@ -1777,7 +1777,7 @@ ul {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
-        behavior: url(/pie/PIE.htc);
+        behavior: url(/public/pie/PIE.htc);
         position:relative;
         margin: 15px auto 8px;
     }
@@ -1798,7 +1798,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     background: rgb(255, 255, 255);
     opacity: 0.3;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";  /* IE 8 */
@@ -1813,7 +1813,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     border: 1px solid #c2f3ff;
 }
 
@@ -1826,7 +1826,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     border: 1px solid #c2f3ff;
 }
 
@@ -1839,7 +1839,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     border: 1px solid #c2f3ff;
 }
 
@@ -1852,7 +1852,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     border: 1px solid #c2f3ff;
 }
 
@@ -1865,7 +1865,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     border: 1px solid #c2f3ff;
 }
 
@@ -1878,7 +1878,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     border: 1px solid #c2f3ff;
 }
 /* section "reviews", page "index.html"
@@ -1916,7 +1916,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     border: 1px solid #c2f3ff;
 }
 
@@ -1929,7 +1929,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     border: 1px solid #c2f3ff;
 }
 
@@ -1942,7 +1942,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     border: 1px solid #c2f3ff;
 }
 
@@ -1961,7 +1961,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     background: #79dbff;
     width: 112px;
     height: 112px;
@@ -1983,7 +1983,7 @@ ul {
     width: 38px;
     height: 38px;
     margin: 8px auto 5px;
-    background-image: url("../img/sprite_socmenu_contacts.png");
+    background-image: url("../img/sprites/sprite_socmenu_contacts.png");
 }
 
 .contact_us .contact_us_block.address .block_content .icon {
@@ -2077,7 +2077,7 @@ ul {
     -webkit-border-radius: 19px;
     -moz-border-radius: 19px;
     border-radius: 19px;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     position:relative;
     border: 2px solid #fff;
     margin-top: 25px;
@@ -2156,7 +2156,7 @@ ul {
 .contacts .office_contacts .contacts_block_container .contacts_block .icon {
     width: 38px;
     height: 38px;
-    background-image: url("../img/sprite_socmenu_contacts.png");
+    background-image: url("../img/sprites/sprite_socmenu_contacts.png");
     margin: 25px auto 11px;
 }
 
@@ -2237,7 +2237,7 @@ ul {
     -webkit-border-radius: 19px;
     -moz-border-radius: 19px;
     border-radius: 19px;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     position:relative;
     border: 2px solid #fff;
     margin-top: 25px;
@@ -2300,7 +2300,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     background-color: #a2e9f6;
     opacity: 0.8;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";  /* IE 8 */
@@ -2315,7 +2315,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     background-color: #a2e9f6;
     opacity: 0.3;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";  /* IE 8 */
@@ -2367,7 +2367,7 @@ ul {
 .medicine .medicine_block .medicine_block_content .block_icon {
     width: 134px;
     height: 96px;
-    background: url('../img/sprite.svg') no-repeat;
+    background: url('../img/sprites/sprite.svg') no-repeat;
     margin: 0 auto 7px;
     position: relative;
 }
@@ -2429,7 +2429,7 @@ ul {
     -webkit-border-radius: 19px;
     -moz-border-radius: 19px;
     border-radius: 19px;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     border: 2px solid #5bd3ff;
     margin-top: 25px;
     position: relative;
@@ -2544,7 +2544,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     position: absolute;
     top: 0;
     left: 0;
@@ -2559,7 +2559,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     position: absolute;
     top: 5px;
     left: 0;
@@ -2613,7 +2613,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     position: absolute;
     top: calc(50% - 4px);
     left: 8px;
@@ -2804,7 +2804,7 @@ ul {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
-        behavior: url(/pie/PIE.htc);
+        behavior: url(/public/pie/PIE.htc);
         position:relative;
     }
 
@@ -2993,7 +2993,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     position: absolute;
     top: 0;
     left: 0;
@@ -3008,7 +3008,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     position: absolute;
     top: 5px;
     left: 0;
@@ -3051,7 +3051,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     background-color: #a2e9f6;
     opacity: 0.8;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";  /* IE 8 */
@@ -3066,7 +3066,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/public/pie/PIE.htc);
     background-color: #a2e9f6;
     opacity: 0.3;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";  /* IE 8 */
@@ -3548,7 +3548,7 @@ footer .social_menu {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
-        behavior: url(/pie/PIE.htc);
+        behavior: url(/public/pie/PIE.htc);
         background: rgb(162, 233, 246);
         opacity: 0.8;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";  /* IE 8 */
@@ -3563,7 +3563,7 @@ footer .social_menu {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
-        behavior: url(/pie/PIE.htc);
+        behavior: url(/public/pie/PIE.htc);
         background: rgb(162, 233, 246);
         opacity: 0.3;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";  /* IE 8 */
@@ -3878,7 +3878,7 @@ footer .social_menu {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
-        behavior: url(/pie/PIE.htc);
+        behavior: url(/public/pie/PIE.htc);
         background: rgb(162, 233, 246);
         opacity: 0.8;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";  /* IE 8 */
@@ -3893,7 +3893,7 @@ footer .social_menu {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
-        behavior: url(/pie/PIE.htc);
+        behavior: url(/public/pie/PIE.htc);
         background: rgb(162, 233, 246);
         opacity: 0.3;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";  /* IE 8 */
@@ -4296,7 +4296,7 @@ footer .social_menu {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
-        behavior: url(/pie/PIE.htc);
+        behavior: url(/public/pie/PIE.htc);
     }
 
     .we_are_the_best .selectable_blocks_container .selectable_block:hover:after {

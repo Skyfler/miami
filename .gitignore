@@ -1,3 +1,4 @@
 .idea
 node_modules
-dev/img/unused
+dev/img/_unused
+public/
