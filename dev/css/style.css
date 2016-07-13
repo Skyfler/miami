@@ -1884,6 +1884,210 @@ ul {
 /* section "reviews", page "index.html"
    =================================== END ======================================= */
 
+/* section "our_partners", page "index.html"
+   =================================== BEGINNING ======================================= */
+.our_partners {
+    background: #5bd3ff;
+    overflow: hidden;
+    position: relative;
+}
+
+.our_partners .container {
+    padding-top: 65px;
+    position: static;
+}
+
+.our_partners .block_main_title {
+    color: #fff;
+}
+
+.our_partners .block_description {
+    color: #fff;
+}
+
+.our_partners .divider {
+    background: #fff;
+}
+
+    /* div "#partners_carousel", (section "our_partners") page "index.html"
+       =================================== BEGINNING ======================================= */
+    #partners_carousel {
+        padding-bottom: 65px;
+        margin: 0px auto;
+        max-width: 395px;
+        overflow: visible;
+    }
+
+    #partners_carousel .arrow {
+        height: 50px;
+        width: 28px;
+        position: absolute;
+        top: 50px;
+        z-index: 100;
+    }
+
+    #partners_carousel .arrow.left_arrow {
+        left: 2%;
+    }
+
+    #partners_carousel .arrow.right_arrow {
+        right: 2%;
+    }
+
+    #partners_carousel .arrow svg {
+        height: 50px;
+        width: 28px;
+    }
+
+    #partners_carousel .overflow_block {
+        width: 300%;
+    }
+
+    #partners_carousel .slider_slide {
+        width: 33.33333333333%;
+    }
+
+    #partners_carousel .partner_block {
+        width: 90%;
+        min-height: 300px;
+        padding: 5px;
+        overflow: hidden;
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";  /* IE 8 */
+        transition: opacity ease 1s;
+    }
+
+    #partners_carousel .slider_slide .partner_text {
+        color: #fff;
+        font-weight: 300;
+        font-size: 1.8em;
+        line-height: 30px;
+        position: relative;
+        min-height: 100px;
+        padding-bottom: 14px;
+    }
+
+    #partners_carousel .slider_slide .partner_icon {
+        display: block;
+        width: 135px;
+        height: 135px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        behavior: url(/pie/PIE.htc);
+        position:relative;
+        margin: 0 auto 11px;
+    }
+
+    #partners_carousel .slider_slide .partner_name {
+        font-size: 1.6em;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+    #partners_carousel .slider_slide.selected .partner_name {
+        text-transform: uppercase;
+    }
+    /* div "#partners_carousel", (section "our_partners") page "index.html"
+       =================================== END ======================================= */
+
+.our_partners .decor_circle_1 {
+    width: 98px;
+    height: 98px;
+    position: absolute;
+    top: 55px;
+    left: calc(50% - 49px);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    behavior: url(/pie/PIE.htc);
+    background: rgb(255, 255, 255);
+    opacity: 0.3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";  /* IE 8 */
+}
+
+.our_partners .decor_circle_2 {
+    width: 292px;
+    height: 292px;
+    position: absolute;
+    top: -68px;
+    left: calc(50% - 700px);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    behavior: url(/pie/PIE.htc);
+    border: 1px solid #c2f3ff;
+}
+
+.our_partners .decor_circle_3 {
+    width: 219px;
+    height: 219px;
+    position: absolute;
+    top: -68px;
+    left: calc(50% - 580px);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    behavior: url(/pie/PIE.htc);
+    border: 1px solid #c2f3ff;
+}
+
+.our_partners .decor_circle_4 {
+    width: 74px;
+    height: 74px;
+    position: absolute;
+    top: 53px;
+    left: calc(50% + 360px);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    behavior: url(/pie/PIE.htc);
+    border: 1px solid #c2f3ff;
+}
+
+.our_partners .decor_circle_5 {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: -63px;
+    left: calc(50% - 436px);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    behavior: url(/pie/PIE.htc);
+    border: 1px solid #c2f3ff;
+}
+
+.our_partners .decor_circle_6 {
+    width: 578px;
+    height: 578px;
+    position: absolute;
+    bottom: -215px;
+    left: calc(50% + 72px);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    behavior: url(/pie/PIE.htc);
+    border: 1px solid #c2f3ff;
+}
+
+.our_partners .decor_circle_7 {
+    width: 434px;
+    height: 434px;
+    position: absolute;
+    bottom: -72px;
+    left: calc(50% + 308px);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    behavior: url(/pie/PIE.htc);
+    border: 1px solid #c2f3ff;
+}
+/* section "our_partners", page "index.html"
+   =================================== END ======================================= */
+
 /* section "contact_us", page "index.html"
    =================================== BEGINNING ======================================= */
 .contact_us {
@@ -3210,6 +3414,26 @@ footer .social_menu {
 
 }
 
+@media (min-width: 415px) {
+
+    /* section "our_partners", page "index.html"
+   =================================== BEGINNING ======================================= */
+        /* div "#partners_carousel", (section "our_partners") page "index.html"
+       =================================== BEGINNING ======================================= */
+        #partners_carousel .arrow.left_arrow {
+            left: 0;
+        }
+
+        #partners_carousel .arrow.right_arrow {
+            right: 0;
+        }
+        /* div "#partners_carousel", (section "our_partners") page "index.html"
+       =================================== END ======================================= */
+    /* section "our_partners", page "index.html"
+   =================================== END ======================================= */
+
+}
+
 @media (min-width: 425px) {
 
     /* section "contacts", page "contacts.html"
@@ -3357,7 +3581,6 @@ footer .social_menu {
        =================================== END ======================================= */
     /* section "reviews", page "index.html"
    =================================== END ======================================= */
-
 }
 
 @media (min-width: 720px) {
@@ -3646,22 +3869,6 @@ footer .social_menu {
         line-height: 50px;
     }
     /* div "#slider", page "index.html"
-   =================================== END ======================================= */
-
-    /* section "reviews", page "index.html"
-   =================================== BEGINNING ======================================= */
-        /* div "#carousel", (section "reviews") page "index.html"
-       =================================== BEGINNING ======================================= */
-        #carousel .review_block.previous {
-            left: -430px;
-        }
-
-        #carousel  .review_block.next {
-            right: -430px;
-        }
-        /* div "#carousel", (section "reviews") page "index.html"
-       =================================== END ======================================= */
-    /* section "reviews", page "index.html"
    =================================== END ======================================= */
 
     /* section "services", page "services.html"
