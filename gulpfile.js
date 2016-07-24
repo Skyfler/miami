@@ -48,7 +48,8 @@ gulp.task('webpack', function() {
             },
             plugins: [
                 new webpack.optimize.UglifyJsPlugin({minimize: true})
-            ]
+            ],
+            devtool: 'source-map'
         }, webpack))
         .pipe(gulp.dest(path.public.js));
 });

@@ -12,6 +12,7 @@ Menu.prototype.constructor = Menu;
 Menu.prototype._onClick = function(e) {
     var target = e.target;
 
+    this._preventDefaultCheck.bind(this)(e);
     this._toggleDropdown.bind(this)(target);
     this._toggleSubMenu.bind(this)(target);
 };
@@ -49,6 +50,12 @@ Menu.prototype._closeSubMenu = function(submenuContainer) {
     submenuContainer.classList.add('closed');
     submenuContainer.classList.remove('open');
     submenuContainer.classList.add('collapsed');
+};
+
+Menu.prototype._preventDefaultCheck = function(e) {
+    if (e.target.hasAttribute('data-preventDefaultUntil') && this._elem.offsetWidth < e.target.getAttribute('data-preventDefaultUntil')) {
+        e.preventDefault();
+    }
 };
 
 module.exports = Menu;

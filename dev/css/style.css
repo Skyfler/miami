@@ -1013,6 +1013,7 @@ ul {
 /* section "we_are_the_best", page "index.html"
    =================================== BEGINNING ======================================= */
 .we_are_the_best {
+    display: none;
     overflow: hidden;
     background: #5bd3ff;
 }
@@ -1884,32 +1885,33 @@ ul {
 /* section "reviews", page "index.html"
    =================================== END ======================================= */
 
-/* section "our_partners", page "index.html"
+/* section "partners", page "index.html"
    =================================== BEGINNING ======================================= */
-.our_partners {
+.partners {
+    display: none;
     background: #5bd3ff;
     overflow: hidden;
     position: relative;
 }
 
-.our_partners .container {
+.partners .container {
     padding-top: 65px;
     position: static;
 }
 
-.our_partners .block_main_title {
+.partners .block_main_title {
     color: #fff;
 }
 
-.our_partners .block_description {
+.partners .block_description {
     color: #fff;
 }
 
-.our_partners .divider {
+.partners .divider {
     background: #fff;
 }
 
-    /* div "#partners_carousel", (section "our_partners") page "index.html"
+    /* div "#partners_carousel", (section "partners") page "index.html"
        =================================== BEGINNING ======================================= */
     #partners_carousel {
         padding-bottom: 65px;
@@ -1990,10 +1992,10 @@ ul {
     #partners_carousel .slider_slide.selected .partner_name {
         text-transform: uppercase;
     }
-    /* div "#partners_carousel", (section "our_partners") page "index.html"
+    /* div "#partners_carousel", (section "partners") page "index.html"
        =================================== END ======================================= */
 
-.our_partners .decor_circle_1 {
+.partners .decor_circle_1 {
     width: 98px;
     height: 98px;
     position: absolute;
@@ -2008,7 +2010,7 @@ ul {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";  /* IE 8 */
 }
 
-.our_partners .decor_circle_2 {
+.partners .decor_circle_2 {
     width: 292px;
     height: 292px;
     position: absolute;
@@ -2021,7 +2023,7 @@ ul {
     border: 1px solid #c2f3ff;
 }
 
-.our_partners .decor_circle_3 {
+.partners .decor_circle_3 {
     width: 219px;
     height: 219px;
     position: absolute;
@@ -2034,7 +2036,7 @@ ul {
     border: 1px solid #c2f3ff;
 }
 
-.our_partners .decor_circle_4 {
+.partners .decor_circle_4 {
     width: 74px;
     height: 74px;
     position: absolute;
@@ -2047,7 +2049,7 @@ ul {
     border: 1px solid #c2f3ff;
 }
 
-.our_partners .decor_circle_5 {
+.partners .decor_circle_5 {
     width: 200px;
     height: 200px;
     position: absolute;
@@ -2060,7 +2062,7 @@ ul {
     border: 1px solid #c2f3ff;
 }
 
-.our_partners .decor_circle_6 {
+.partners .decor_circle_6 {
     width: 578px;
     height: 578px;
     position: absolute;
@@ -2073,7 +2075,7 @@ ul {
     border: 1px solid #c2f3ff;
 }
 
-.our_partners .decor_circle_7 {
+.partners .decor_circle_7 {
     width: 434px;
     height: 434px;
     position: absolute;
@@ -2085,7 +2087,7 @@ ul {
     behavior: url(/pie/PIE.htc);
     border: 1px solid #c2f3ff;
 }
-/* section "our_partners", page "index.html"
+/* section "partners", page "index.html"
    =================================== END ======================================= */
 
 /* section "contact_us", page "index.html"
@@ -3382,6 +3384,123 @@ footer .social_menu {
     background: #79dbff;
 }
 
+/* section "work_process", page "work.html"
+   =================================== BEGINNING ======================================= */
+.work_process {
+    overflow: hidden;
+}
+
+.work_process .container {
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+.work_process .block_main_title {
+    font-size: 2.6em;
+    color: #ff5c7b;
+}
+
+.work_process .block_description {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #8d8d8d;
+}
+
+.work_process .divider {
+    background: #ff5c7b;
+}
+
+.work_process ol {
+    margin: 0;
+    padding: 0;
+    counter-reset: myCounter;
+    list-style: none;
+}
+
+.work_process ol li:before {
+    counter-increment: myCounter;
+    content: counter(myCounter);
+    display: block;
+    border-radius: 50%;
+    color: white;
+    font-size: 11em;
+    background: #62c5dc;
+    width: 64px;
+    height: 64px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto 15px;
+    line-height: 60px;
+}
+
+.work_process ol li {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.work_process ol li:last-child {
+    margin-bottom: 0;
+}
+
+.work_process ol li .content {
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.work_process ol li .block_title {
+    color: #62c5dc;
+    font-size: 1.6em;
+    text-transform: uppercase;
+}
+
+.work_process ol li .block_text {
+    color: #8d8d8d;
+    line-height: 18px;
+    font-weight: 300;
+    font-size: 1.4em;
+}
+
+.work_process ol li .block_text p {
+    margin: 17px 0 0 0;
+}
+
+.work_process ol li .block_text span {
+    color: #62c5dc;
+}
+
+.work_process ol li .svgdecor {
+    position: absolute;
+    top: calc(50% + 38px + 5px);
+}
+
+.work_process ol li:nth-child(even) .svgdecor {
+    left: calc(300px + 90px + 76px + 5px);
+}
+
+.work_process ol li:nth-child(odd) .svgdecor {
+    left: calc(300px + 90px + 36px - 2px);
+}
+
+.work_process ol li .svgdecor path {
+    stroke-dasharray: 2 2;
+    stroke: #c3c3c3;
+    stroke-width: 1px;
+}
+/* section "work_process", page "work.html"
+   =================================== END ======================================= */
+
+@media (min-width: 350px) {
+
+    /* section "work_process", page "work.html"
+   =================================== BEGINNING ======================================= */
+    .work_process ol li .content {
+        padding: 0 10%;
+    }
+    /* section "work_process", page "work.html"
+   =================================== END ======================================= */
+
+}
+
 @media (max-width: 364px) {
 
     /* section "contact_us", page "index.html"
@@ -3416,9 +3535,9 @@ footer .social_menu {
 
 @media (min-width: 415px) {
 
-    /* section "our_partners", page "index.html"
+    /* section "partners", page "index.html"
    =================================== BEGINNING ======================================= */
-        /* div "#partners_carousel", (section "our_partners") page "index.html"
+        /* div "#partners_carousel", (section "partners") page "index.html"
        =================================== BEGINNING ======================================= */
         #partners_carousel .arrow.left_arrow {
             left: 0;
@@ -3427,9 +3546,9 @@ footer .social_menu {
         #partners_carousel .arrow.right_arrow {
             right: 0;
         }
-        /* div "#partners_carousel", (section "our_partners") page "index.html"
+        /* div "#partners_carousel", (section "partners") page "index.html"
        =================================== END ======================================= */
-    /* section "our_partners", page "index.html"
+    /* section "partners", page "index.html"
    =================================== END ======================================= */
 
 }
@@ -4068,11 +4187,28 @@ footer .social_menu {
         text-align: center;
         overflow: hidden;
         margin: -1px auto 0px;
+    }
+
+    .decoration_container .overflow_block {
         position: relative;
     }
 
     .decor {
         margin-bottom: -2px;
+        position: relative;
+        opacity: 0;
+        transition: opacity ease 1s;
+    }
+
+    .decor+.decor {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .decor.selected {
+        opacity: 1;
     }
 
     .decor img {
@@ -4169,6 +4305,22 @@ footer .social_menu {
         padding-left: 65px;
     }
     /* section "medicine", page "article.html"
+   =================================== END ======================================= */
+
+    /* section "partners", page "index.html"
+   =================================== BEGINNING ======================================= */
+    .partners {
+        display: block;
+    }
+    /* section "partners", page "index.html"
+   =================================== END ======================================= */
+
+    /* section "we_are_the_best", page "index.html"
+   =================================== BEGINNING ======================================= */
+    .we_are_the_best {
+        display: block;
+    }
+    /* section "we_are_the_best", page "index.html"
    =================================== END ======================================= */
 
 }
@@ -4342,6 +4494,79 @@ footer .social_menu {
         display: inline-block;
     }
     /* header, all pages
+   =================================== END ======================================= */
+
+}
+
+@media (min-width: 820px) {
+
+    /* section "work_process", page "work.html"
+   =================================== BEGINNING ======================================= */
+    .work_process ol li {
+        margin-bottom: 0;
+    }
+
+    .work_process ol li:before {
+        border-radius: 50%;
+        width: 76px;
+        height: 76px;
+        font-size: 3em;
+        line-height: normal;
+        padding-top: 17px;
+        position: absolute;
+        top: calc(50% - 38px);
+        margin: 0;
+    }
+
+    .work_process ol li:nth-child(even):before {
+        left: calc(100% - 466px);
+    }
+
+    .work_process ol li:nth-child(odd):before {
+        left: 390px;
+    }
+
+    .work_process ol li:nth-child(even) {
+        text-align: right;
+    }
+
+    .work_process ol li:nth-child(odd) {
+        text-align: left;
+    }
+
+    .work_process ol li:after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 100%;
+        border-left: 1px solid #dedede;
+        top: 0;
+    }
+
+    .work_process ol li:nth-child(even):after {
+        left: calc(100% - 345px);
+    }
+
+    .work_process ol li:nth-child(odd):after {
+        left: 345px;
+    }
+
+    .work_process ol li .content {
+        min-height: 75px;
+        width: 300px;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+    }
+
+    .work_process ol li:nth-child(even) .content {
+        text-align: left;
+    }
+
+    .work_process ol li:nth-child(odd) .content {
+        text-align: right;
+    }
+    /* section "work_process", page "work.html"
    =================================== END ======================================= */
 
 }

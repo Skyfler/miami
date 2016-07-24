@@ -5,6 +5,8 @@
     var Dropdown = require('./dropdown.js');
     var Menu = require('./menu.js');
     var Slider = require('./slider.js');
+    var FadeSlider = require('./fade-slider.js');
+    var SvgPathCreator = require('./svgpathcreateor');
     
     var mainMenu = new Menu({
         elem: document.querySelector('#main_menu')
@@ -17,7 +19,15 @@
     if (sliderElem) {
         var slider = new Slider({
             elem: sliderElem,
-            delay: 4000
+            delay: 5000
+        });
+    }
+    
+    var fadeSliderElem = document.querySelector('#fadeSlider');
+    if (fadeSliderElem) {
+        var fadeSlider = new FadeSlider({
+            elem: fadeSliderElem,
+            delay: 5000
         });
     }
 
@@ -463,6 +473,14 @@
                     ]
                 }
             ]
+        });
+    }
+
+    var workListElem = document.querySelector('#worklist');
+    if (workListElem) {
+        var workList = new SvgPathCreator({
+            elem: workListElem,
+            minScreenWidth: 1033
         });
     }
 
