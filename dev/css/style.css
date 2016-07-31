@@ -587,17 +587,17 @@ ul {
 }
 
 .brand_container .brand_text {
-    margin-top: 11px;
+    margin-top: 17px;
     margin-left: 20px;
     float: left;
-    width: 145px;
+    width: 165px;
 }
 
 .brand_container .brand_title {
     font-weight: 900;
-    font-size: 2em;
+    font-size: 2.4em;
     color: #70e9ff;
-    letter-spacing: 0.06em;
+    letter-spacing: .02em;
 }
 
 .brand_container .brand_title span+span {
@@ -606,12 +606,13 @@ ul {
 }
 
 .brand_container .brand_description {
-    margin-top: 4px;
+    margin-top: 1px;
     font-size: 1.2em;
     color: #969696;
     font-weight: 300;
     text-transform: uppercase;
     line-height: 18px;
+    letter-spacing: -0.02em;
 }
 
 .our_contacts {
@@ -894,8 +895,10 @@ ul {
     font-weight: 700;
     margin-left: 82px;
     color: #ff5c7b;
-    margin-top: 10px;
+    /*margin-top: 10px;*/
+    margin-top: 0;
     margin-bottom: 0;
+    position: relative;
 }
 
 .about_us .block_content .text {
@@ -904,6 +907,15 @@ ul {
     color: #6c6c6c;
     margin-top: 40px;
     margin-bottom: 0;
+    position: relative;
+}
+
+.about_us .block_content .text p {
+    margin: 0;
+}
+
+.about_us .block_content .text p+p {
+    margin-top: 25px;
 }
 
 .about_us .block_content .decor_container {
@@ -2529,6 +2541,43 @@ ul {
     bottom: -775px;
     left: -529px;
     position: absolute;
+}
+
+.article .list {
+    margin: 0 0 20px;
+    padding: 0;
+}
+
+.article .list li {
+    padding: 8px 0 0 26px;
+    position: relative;
+}
+
+.article .list li:before {
+    display: block;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.article .number-list {
+    counter-reset: myCounter;
+    list-style: none;
+}
+
+.article .number-list li:before {
+    counter-increment: myCounter;
+    content: counter(myCounter)")";
+}
+
+.article .check-list li:before {
+    content: '✓';
+    top: 6px;
+}
+
+.article .arrow-list li:before {
+    content: '➤';
+    top: 6px;
 }
 
     /* section "article_type_1", page

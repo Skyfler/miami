@@ -99,6 +99,15 @@ gulp.task('html', function() {
         .pipe(gulp.dest(path.public.html));
 });
 
+gulp.task('html-nomin', function() {
+    gulp.src(path.dev.html)
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
+        .pipe(gulp.dest(path.public.html));
+});
+
 gulp.task('webserver', function () {
     browserSync(config);
 });
