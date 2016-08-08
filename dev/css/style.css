@@ -2102,6 +2102,148 @@ ul {
 /* section "partners", page "index.html"
    =================================== END ======================================= */
 
+/* section "hospitals", page "hospitals.html"
+   =================================== BEGINNING ======================================= */
+.hospitals > .container:first-child {
+    padding-bottom: 0;
+}
+
+.hospitals .dropdown-group .btn_panel {
+    background: #79dbff;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    text-align: left;
+}
+
+.hospitals .dropdown-group .btn_panel .dropdown_toggle {
+    display: inline-block;
+    border: none;
+    background: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.6em;
+    position: relative;
+    padding-left: 50px;
+}
+
+.hospitals .dropdown-group .btn_panel .dropdown_toggle .btn_decor {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 4px solid #fff;
+    left: 0;
+    top: calc(50% - 15px);
+}
+
+.hospitals .dropdown-group .btn_panel .dropdown_toggle .btn_decor div {
+    width: 16px;
+    height: 4px;
+    background: #fff;
+    position: absolute;
+    top: 9px;
+    left: 3px;
+}
+
+.hospitals .dropdown-group .btn_panel .dropdown_toggle .btn_decor div+div {
+    height: 16px;
+    width: 4px;
+    background: #fff;
+    position: absolute;
+    top: 3px;
+    left: 9px;
+}
+
+.hospitals .dropdown-group.open .btn_panel .dropdown_toggle .btn_decor div+div {
+    display: none;
+}
+
+.hospitals .dropdown-group .block_content {
+    float: left;
+    width: 100%;
+    text-align: left;
+    padding: 0 10px 0;
+}
+
+.hospitals .dropdown-group p {
+    position: relative;
+    margin: 0 0 20px 0;
+}
+
+.hospitals .dropdown-group .article_text {
+    width: auto;
+}
+
+.hospitals .dropdown-group .title {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 82px;
+    color: #ff5c7b;
+    padding-top: 10px;
+    margin-bottom: 0;
+    min-height: 65px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.hospitals .dropdown-group .decor_container {
+    position: relative;
+    margin-top: -10px;
+}
+
+.hospitals .dropdown-group .decor_circle_3 {
+    height: 128px;
+    width: 128px;
+    background: #7dd6ff;
+    opacity: 0.3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";  /* IE 8 */
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    behavior: url(/pie/PIE.htc);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hospitals .dropdown-group .decor_circle_4 {
+    height: 48px;
+    width: 48px;
+    background: #55c9ff;
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";  /* IE 8 */
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    behavior: url(/pie/PIE.htc);
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+
+.hospitals .dropdown-group .img_block {
+    float: left;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.article_type_3 .img_block .img_placeholder {
+    display: none;
+}
+
+.hospitals .dropdown-group .img_block img{
+    margin: 0 auto;
+    position: relative;
+}
+
+.hospitals .dropdown-group .text_below {
+    margin: 40px 0 0 0;
+    padding: 0 10px;
+}
+/* section "hospitals", page "hospitals.html"
+   =================================== END ======================================= */
+
 /* section "contact_us", page "index.html"
    =================================== BEGINNING ======================================= */
 .contact_us {
@@ -5236,6 +5378,20 @@ footer .social_menu {
     /* section "prices", page "prices.html"
    =================================== END ======================================= */
 
+    /* section "hospitals", page "hospitals.html"
+     =================================== BEGINNING ======================================= */
+    .hospitals .dropdown-group .btn_panel .dropdown_toggle {
+        margin-left: calc(7.3333333% + 10px);
+    }
+
+    .hospitals .dropdown-group  .dropdown_bar {
+        /*width: 87.33333333326%;
+        margin-left: 7.333333%;
+        padding: 0 10px;*/
+    }
+    /* section "hospitals", page "hospitals.html"
+   =================================== END ======================================= */
+
     /* section "about", page "about_us.html"
    =================================== BEGINNING ======================================= */
     .about .block_content {
@@ -5322,6 +5478,44 @@ footer .social_menu {
         /* section "article_type_3", page
        =================================== END ======================================= */
     /* section "article", page "article.html"
+   =================================== END ======================================= */
+
+    /* section "hospitals", page "hospitals.html"
+       =================================== BEGINNING ======================================= */
+    .hospitals .dropdown-group .block_content {
+        width: 36.33333333%;
+        margin-left: 7.33333333%;
+    }
+
+    .hospitals .dropdown-group .img_block {
+        width: 43.66666666%;
+        margin-left: 7.33333333%;
+        margin-top: 0;
+        max-width: 493px;                                   /* = img(width) */
+    }
+
+    .hospitals .dropdown-group .img_block .img_placeholder {
+        display: block;
+        padding-top: 76.267748478701825557809330628803%;    /* = (img(height) / (img(width) / 100%)) */
+    }
+
+    .hospitals .dropdown-group .img_block .img_container {
+        position: absolute;
+        width: 43.6667%;
+        top: 50%;
+    }
+
+    .hospitals .dropdown-group .img_block .img_container img{
+        transform: translateY(-50%);
+        margin: 0 0 0 auto;
+    }
+
+    .hospitals .dropdown-group .text_below {
+        width: 87.3333%;
+        margin-left: 7.33333%;
+        padding: 0px 0px 0px 10px;
+    }
+    /* section "hospitals", page "hospitals.html"
    =================================== END ======================================= */
 
 }
@@ -5535,11 +5729,15 @@ footer .social_menu {
     .contact_us .form_container {
         background-size: 100%;
     }
-
+    /* div "contact_us", page "index.html"
+   =================================== END ======================================= */
+   
+    /* div "contacts", page "contacts.html"
+   =================================== BEGINNING ======================================= */
     .contacts .form_container {
         background-size: 100%;
     }
-    /* div "contact_us", page "index.html"
+    /* div "contacts", page "contacts.html"
    =================================== END ======================================= */
 
 }

@@ -39,13 +39,30 @@
         });
     }
 
-    var partnersCarouselElem = document.querySelector('#partners_carousel');
-    if (partnersCarouselElem) {
-        var partnersCarousel = new Slider({
-            elem: partnersCarouselElem,
+    var doctorsCarouselElem = document.querySelector('#doctors_carousel');
+    if (doctorsCarouselElem) {
+        var doctorsCarousel = new Slider({
+            elem: doctorsCarouselElem,
             delay: 0
         });
     }
+
+    var dropdownGroupElem = document.querySelector('.dropdown-group');
+    if (dropdownGroupElem) {
+        var dropdownElemArr = dropdownGroupElem.querySelectorAll('.dropdown');
+        if (dropdownElemArr.length > 0) {
+            var dropdownArr = [];
+
+            for (var i = 0; i < dropdownElemArr.length; i ++) {
+                var newDropdown = new Dropdown({
+                    elem: dropdownElemArr[i]
+                });
+
+                dropdownArr.push(newDropdown);
+            }
+        }
+    }
+
 
     var packageOffersElem = document.querySelector('#package_offers');
     if (packageOffersElem) {
