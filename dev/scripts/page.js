@@ -31,10 +31,18 @@
         });
     }
 
-    var reviewsCarouselElem = document.querySelector('#carousel');
+    /*var reviewsCarouselElem = document.querySelector('#carousel');
     if (reviewsCarouselElem) {
         var reviewsCarousel = new Slider({
             elem: reviewsCarouselElem,
+            delay: 0
+        });
+    }*/
+
+    var partnersCarouselElem = document.querySelector('#partners_carousel');
+    if (partnersCarouselElem) {
+        var partnersCarousel = new Slider({
+            elem: partnersCarouselElem,
             delay: 0
         });
     }

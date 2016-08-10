@@ -2154,7 +2154,7 @@ ul {
     left: 9px;
 }
 
-.hospitals .dropdown-group.open .btn_panel .dropdown_toggle .btn_decor div+div {
+.hospitals .dropdown-group .open .btn_panel .dropdown_toggle .btn_decor div+div {
     display: none;
 }
 
