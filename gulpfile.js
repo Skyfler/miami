@@ -40,7 +40,7 @@ var path = {
     clean: './public',
     hosttesting: {
         public: './public/**/*.*',
-        destination: 'Z:/home/test/www'
+        destination: 'Z:/home/test.com/www'
     }
 };
 
