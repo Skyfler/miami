@@ -24,7 +24,7 @@
 <section class="contacts">
     <div class="container">
         <h2 class="block_main_title">Контакты</h2>
-        <div class="block_description">Способы связи с представителями American Baby в Киеве, Харькове, Майами.</div>
+        <div class="block_description">Способы связи с представителями American Baby.</div>
         <div class="divider"></div>
     </div>
     <div class="office_contacts">
@@ -58,21 +58,24 @@
         </div>
     </div>
     <div class="form_container clr">
-        <form action="#" class="container">
-            <div class="title">Свяжитесь с нами</div>
-            <div class="row clr">
-                <div class="form_group">
-                    <input type="text" placeholder="Имя">
+        <div class="form_inner_container container">
+            <div class="waiting_block"></div>
+            <form action="#">
+                <div class="title">Свяжитесь с нами</div>
+                <div class="row clr">
+                    <div class="form_group">
+                        <input type="text" name="Name" placeholder="Имя" data-component="form-input">
+                    </div>
+                    <div class="form_group">
+                        <input type="email" name="Email" placeholder="Mail" data-component="form-input">
+                    </div>
                 </div>
-                <div class="form_group">
-                    <input type="email" placeholder="Mail">
+                <div class="row">
+                    <textarea placeholder="Сообщение" name="Message" data-component="form-input"></textarea>
                 </div>
-            </div>
-            <div class="row">
-                <textarea placeholder="Сообщение"></textarea>
-            </div>
-            <button class="send">Отправить сообщение</button>
-        </form>
+                <button type="submit" class="send">Отправить сообщение</button>
+            </form>
+        </div>
         <div id="map_container">
             <div class="map"></div>
         </div>

@@ -7,6 +7,7 @@
     var Slider = require('./slider.js');
     var FadeSlider = require('./fade-slider.js');
     var SvgPathCreator = require('./svgpathcreateor');
+    var FormSwitcher = require('./formswitcher');
     
     var mainMenu = new Menu({
         elem: document.querySelector('#main_menu')
@@ -20,6 +21,7 @@
         var slider = new Slider({
             elem: sliderElem,
             delay: 5000
+            // delay: 0
         });
     }
     
@@ -506,6 +508,15 @@
         var workList = new SvgPathCreator({
             elem: workListElem,
             minScreenWidth: 1033
+        });
+    }
+
+    var formswithcerElem = document.querySelector('.form_inner_container');
+    if (formswithcerElem) {
+        var formSwitcher = new FormSwitcher({
+            elem: formswithcerElem,
+            selectArr: [],
+            uploadArr: []
         });
     }
 

@@ -1,32 +1,58 @@
 "use strict";
 
+var Helper = require('./helper');
+
 function Dropdown(options) {
+    Helper.call(this, options);
+
     this._elem = options.elem;
-    this._openBtn = this._elem.querySelector('[data-component="dropdown_toggle"]');
+    this._openBtnSelector = '[data-component="dropdown_toggle"]';
     if (this._elem.classList.contains('open')) {
         this._state = 'open';
     } else {
         this._state = 'closed';
     }
 
-    this._elem.addEventListener('click', this._onClick.bind(this));
+    this._onClick = this._onClick.bind(this);
+
+    this._addListener(this._elem, 'click', this._onClick);
 }
 
+Dropdown.prototype = Object.create(Helper.prototype);
+Dropdown.prototype.constructor = Dropdown;
+
 Dropdown.prototype._onClick = function(e) {
-    e.preventDefault();
     var target = e.target;
 
-    this._toggleDropdown.bind(this)(target);
+    this._toggleDropdown(target, e);
+
+    return target;
 };
 
-Dropdown.prototype._toggleDropdown = function(target) {
-    if (this._openBtn.contains(target)) {
-        if (this._state === 'closed') {
-            this._openDropdown.bind(this)();
-        } else {
-            this._closeDropdown.bind(this)();
-        }
+Dropdown.prototype._toggleDropdown = function(target, e) {
+    var dropdownToggle;
+
+    if (target) {
+        dropdownToggle = target.closest(this._openBtnSelector);
+    } else {
+        dropdownToggle = true;
     }
+
+    if (dropdownToggle) {
+        if (e) {
+            e.preventDefault();
+        }
+
+        if (this._state === 'closed') {
+            this._openDropdown();
+        } else {
+            this._closeDropdown();
+        }
+
+        return true;
+    }
+
+    return false;
 };
 
 Dropdown.prototype._openDropdown = function() {
@@ -39,6 +65,7 @@ Dropdown.prototype._openDropdown = function() {
     dropdownContainer.style.height = dropdownBar.offsetHeight + 'px';
     this._elem.classList.remove('collapsed');
     setTimeout(function(){
+        if (!dropdownContainer) return;
         dropdownContainer.style.height = '';
     }, 500);
 };

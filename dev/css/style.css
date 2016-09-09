@@ -457,6 +457,115 @@ ul {
     list-style: none;
 }
 
+.error {
+    box-shadow: 0 0 5px 3px red !important;
+}
+
+
+.waiting_block {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: url("../img/spinner.gif") no-repeat center center;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+.waiting_for_response .waiting_block {
+    display: block;
+}
+
+.error_notification {
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: #fff;
+    border: 2px solid #000;
+    text-align: center;
+    padding: 20px 10px;
+    width: 250px;
+    border-radius: 7px;
+}
+
+.error_notification p {
+    font-size: 2.2em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #03BBFF;
+    margin: 0;
+}
+
+.error_notification p + p {
+    font-size: 1.6em;
+    font-weight: 300;
+    color: #000;
+    margin-top: 10px;
+    text-transform: none;
+}
+
+.error_notification button {
+    padding: 10px 25px;
+    border: 1px solid #03BBFF;
+    background: #fff;
+    border-radius: 5px;
+    color: #000;
+    margin-top: 17px;
+    font-size: 1.4em;
+    transition: background .5s ease 0s;
+}
+
+.error_notification button:hover {
+    background: #03BBFF;
+}
+
+.success_notification {
+    text-align: center;
+    padding: 50px 0;
+    /*background: #161616;*/
+}
+
+.success_notification p {
+    font-size: 2.4em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    text-shadow:
+            2px 2px 0px #62C5DC,
+            -2px 2px 0px #62C5DC,
+            2px -2px 0px #62C5DC,
+            -2px -2px 0px #62C5DC;
+}
+
+.success_notification p + p {
+    font-size: 2em;
+    font-weight: 400;
+    color: #fff!important;
+    text-transform: none;
+    margin-top: 14px;
+    text-shadow:
+            1px 1px 0px #62C5DC,
+            -1px 1px 0px #62C5DC,
+            1px -1px 0px #62C5DC,
+            -1px -1px 0px #62C5DC;
+}
+
+@media screen and (min-width: 768px) {
+
+    .success_notification p {
+        font-size: 3.4em;
+    }
+
+    .success_notification p + p {
+        font-size: 2.2em;
+    }
+
+}
+
 .container {
     max-width: 1330px;
     margin: 0 auto;
@@ -674,7 +783,7 @@ ul {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
-        behavior: url(/pie/PIE.htc);
+        behavior: url(/php/lib/pie/PIE.htc);
         position: relative;
         background: url('../img/sprites/sprite_socmenu_contacts.png');
     }
@@ -843,7 +952,7 @@ ul {
 
 .block_description {
     font-size: 1.3em;
-    font-weight: 100;
+    font-weight: 400;
     text-transform: uppercase;
     margin-top: 8px;
     position: relative;
@@ -874,7 +983,6 @@ ul {
 
 .about_us .block_description {
     font-size: 1.2em;
-    font-weight: 300;
     color: #8d8d8d;
 }
 
@@ -885,7 +993,7 @@ ul {
 .about_us .block_content {
     float: left;
     width: 100%;
-    text-align: left;
+    text-align: center;
     padding: 0 10px 0;
 }
 
@@ -893,21 +1001,28 @@ ul {
     text-transform: uppercase;
     font-size: 1.6em;
     font-weight: 700;
-    margin-left: 82px;
+    /*margin-left: 82px;*/
     color: #ff5c7b;
     /*margin-top: 10px;*/
     margin-top: 0;
     margin-bottom: 0;
     position: relative;
+
+    margin-left: 60px;
+    min-height: 50px;
+    text-align: left;
 }
 
 .about_us .block_content .text {
     font-size: 1.6em;
     font-family: Roboto, sans-serif;
     color: #6c6c6c;
-    margin-top: 40px;
+    /*margin-top: 40px;*/
     margin-bottom: 0;
     position: relative;
+
+    margin-top: 20px;
+    text-align: left;
 }
 
 .about_us .block_content .text p {
@@ -931,7 +1046,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     position: absolute;
     top: 0;
     left: 0;
@@ -946,7 +1061,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     position: absolute;
     top: 5px;
     left: 0;
@@ -963,7 +1078,7 @@ ul {
     -webkit-border-radius: 19px;
     -moz-border-radius: 19px;
     border-radius: 19px;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     position:relative;
     border: 2px solid #5bd3ff;
     margin-top: 30px;
@@ -996,7 +1111,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     background: rgb(162, 233, 246);
     opacity: 0.3;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";  /* IE 8 */
@@ -1011,7 +1126,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     background: rgb(162, 233, 246);
     opacity: 0.8;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";  /* IE 8 */
@@ -1041,7 +1156,6 @@ ul {
 
 .we_are_the_best .block_description {
     font-size: 1.2em;
-    font-weight: 300;
     color: #fff;
 }
 
@@ -1118,7 +1232,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     position: absolute;
 }
 
@@ -1133,7 +1247,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     position: absolute;
 }
 
@@ -1148,7 +1262,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     position: absolute;
 }
 
@@ -1163,7 +1277,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     position: absolute;
 }
 /* section "we_are_the_best", page "index.html"
@@ -1186,7 +1300,6 @@ ul {
 
 .our_services .block_description {
     font-size: 1.2em;
-    font-weight: 300;
     color: #8d8d8d;
 }
 
@@ -1202,7 +1315,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     position: absolute;
     border: 3px solid #bde7f1;
 }
@@ -1215,7 +1328,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     position: absolute;
     border: 2px solid #bde7f1;
 }
@@ -1353,9 +1466,11 @@ ul {
     position: relative;
     font-weight: 300;
     line-height: 18px;
+    min-height: 38px;
 }
 
 .our_services .service_block .service_block_content .details {
+    display: inline-block;
     font-size: 1.2em;
     text-transform: uppercase;
     font-weight: 900;
@@ -1365,7 +1480,7 @@ ul {
     -webkit-border-radius: 19px;
     -moz-border-radius: 19px;
     border-radius: 19px;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     border: 2px solid #fff;
     margin-top: 25px;
     position: relative;
@@ -1415,7 +1530,6 @@ ul {
 
 .services .block_description {
     font-size: 1.2em;
-    font-weight: 300;
     color: #8d8d8d;
 }
 
@@ -1498,7 +1612,7 @@ ul {
     -webkit-border-radius: 19px;
     -moz-border-radius: 19px;
     border-radius: 19px;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     border: 2px solid #5bd3ff;
     margin-top: 25px;
     position: relative;
@@ -1557,7 +1671,6 @@ ul {
 
 .important_info .block_description {
     font-size: 1.2em;
-    font-weight: 300;
     color: #8d8d8d;
 }
 
@@ -1640,7 +1753,7 @@ ul {
     -webkit-border-radius: 19px;
     -moz-border-radius: 19px;
     border-radius: 19px;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     border: 2px solid #5bd3ff;
     margin-top: 25px;
     position: relative;
@@ -1790,7 +1903,7 @@ ul {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
-        behavior: url(/pie/PIE.htc);
+        behavior: url(/php/lib/pie/PIE.htc);
         position:relative;
         margin: 15px auto 8px;
     }
@@ -1811,7 +1924,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     background: rgb(255, 255, 255);
     opacity: 0.3;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";  /* IE 8 */
@@ -1826,7 +1939,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     border: 1px solid #c2f3ff;
 }
 
@@ -1839,7 +1952,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     border: 1px solid #c2f3ff;
 }
 
@@ -1852,7 +1965,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     border: 1px solid #c2f3ff;
 }
 
@@ -1865,7 +1978,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     border: 1px solid #c2f3ff;
 }
 
@@ -1878,7 +1991,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     border: 1px solid #c2f3ff;
 }
 
@@ -1891,7 +2004,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     border: 1px solid #c2f3ff;
 }
 /* section "reviews", page "index.html"
@@ -1990,7 +2103,7 @@ ul {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
-        behavior: url(/pie/PIE.htc);
+        behavior: url(/php/lib/pie/PIE.htc);
         position:relative;
         margin: 0 auto 11px;
     }
@@ -2016,7 +2129,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     background: rgb(255, 255, 255);
     opacity: 0.3;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";  /* IE 8 */
@@ -2031,7 +2144,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     border: 1px solid #c2f3ff;
 }
 
@@ -2044,7 +2157,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     border: 1px solid #c2f3ff;
 }
 
@@ -2057,7 +2170,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     border: 1px solid #c2f3ff;
 }
 
@@ -2070,7 +2183,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     border: 1px solid #c2f3ff;
 }
 
@@ -2083,7 +2196,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     border: 1px solid #c2f3ff;
 }
 
@@ -2096,7 +2209,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     border: 1px solid #c2f3ff;
 }
 /* section "partners", page "index.html"
@@ -2109,10 +2222,16 @@ ul {
 }
 
 .hospitals .dropdown-group .btn_panel {
-    background: #79dbff;
+    /*background: #79dbff;*/
     padding-top: 23px;
     padding-bottom: 23px;
     text-align: left;
+    border-top: 1px solid #79dbff;
+    border-bottom: 1px solid #79dbff;
+}
+
+.hospitals .dropdown-group .dropdown+.dropdown .btn_panel {
+    border-top: none;
 }
 
 .hospitals .dropdown-group .btn_panel .dropdown_toggle {
@@ -2121,7 +2240,7 @@ ul {
     background: none;
     font-weight: 700;
     text-transform: uppercase;
-    color: #fff;
+    color: #79dbff;
     font-size: 1.6em;
     position: relative;
     padding-left: 50px;
@@ -2131,7 +2250,7 @@ ul {
     position: absolute;
     width: 30px;
     height: 30px;
-    border: 4px solid #fff;
+    border: 4px solid #79dbff;
     left: 0;
     top: calc(50% - 15px);
 }
@@ -2139,7 +2258,7 @@ ul {
 .hospitals .dropdown-group .btn_panel .dropdown_toggle .btn_decor div {
     width: 16px;
     height: 4px;
-    background: #fff;
+    background: #79dbff;
     position: absolute;
     top: 9px;
     left: 3px;
@@ -2148,7 +2267,7 @@ ul {
 .hospitals .dropdown-group .btn_panel .dropdown_toggle .btn_decor div+div {
     height: 16px;
     width: 4px;
-    background: #fff;
+    background: #79dbff;
     position: absolute;
     top: 3px;
     left: 9px;
@@ -2156,6 +2275,10 @@ ul {
 
 .hospitals .dropdown-group .open .btn_panel .dropdown_toggle .btn_decor div+div {
     display: none;
+}
+
+.hospitals .dropdown-group .dropdown_container {
+    border-bottom: 1px solid rgb(121, 219, 255);
 }
 
 .hospitals .dropdown-group .block_content {
@@ -2201,7 +2324,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     position: absolute;
     top: 0;
     left: 0;
@@ -2216,7 +2339,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     position: absolute;
     top: 5px;
     left: 0;
@@ -2276,7 +2399,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     border: 1px solid #c2f3ff;
 }
 
@@ -2289,7 +2412,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     border: 1px solid #c2f3ff;
 }
 
@@ -2302,7 +2425,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     border: 1px solid #c2f3ff;
 }
 
@@ -2321,7 +2444,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     background: #79dbff;
     width: 112px;
     height: 112px;
@@ -2368,7 +2491,7 @@ ul {
         background-position: -114px -64px;
     }
     /* classes "tel" "address" "skype" "mail", (section "contact_us") page "index.html", (section "contacts") page "contacts.html"
-       =================================== BEGINNING ======================================= */
+       =================================== END ======================================= */
 
 .contact_us .contact_us_block .block_content .text {
     font-weight: 300;
@@ -2411,7 +2534,7 @@ ul {
     border: 2px solid #fff;
     color: #fff;
     font-size: 2em;
-    font-weight: 300;
+    font-weight: 400;
     padding: 10px;
 }
 
@@ -2437,7 +2560,7 @@ ul {
     -webkit-border-radius: 19px;
     -moz-border-radius: 19px;
     border-radius: 19px;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     position:relative;
     border: 2px solid #fff;
     margin-top: 25px;
@@ -2467,7 +2590,6 @@ ul {
 
 .contacts .block_description {
     color: #8d8d8d;
-    font-weight: 300;
     font-size: 1.2em;
 }
 
@@ -2532,7 +2654,7 @@ ul {
     position: relative;
 }
 
-.contacts .form_container form {
+.contacts .form_container .form_inner_container {
     width: 100%;
     float: left;
     padding-top: 30px;
@@ -2571,7 +2693,7 @@ ul {
     border: 2px solid #fff;
     color: #fff;
     font-size: 2em;
-    font-weight: 300;
+    font-weight: 400;
     padding: 10px;
 }
 
@@ -2597,7 +2719,7 @@ ul {
     -webkit-border-radius: 19px;
     -moz-border-radius: 19px;
     border-radius: 19px;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     position:relative;
     border: 2px solid #fff;
     margin-top: 25px;
@@ -2637,7 +2759,6 @@ ul {
 
 .article .block_description {
     color: #8d8d8d;
-    font-weight: 300;
     font-size: 1.2em;
 }
 
@@ -2661,7 +2782,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     background-color: #a2e9f6;
     opacity: 0.8;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";  /* IE 8 */
@@ -2676,7 +2797,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     background-color: #a2e9f6;
     opacity: 0.3;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";  /* IE 8 */
@@ -2793,7 +2914,7 @@ ul {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
-        behavior: url(/pie/PIE.htc);
+        behavior: url(/php/lib/pie/PIE.htc);
         position: absolute;
         top: 0;
         left: 0;
@@ -2808,7 +2929,7 @@ ul {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
-        behavior: url(/pie/PIE.htc);
+        behavior: url(/php/lib/pie/PIE.htc);
         position: absolute;
         top: 5px;
         left: 0;
@@ -2857,7 +2978,7 @@ ul {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
-        behavior: url(/pie/PIE.htc);
+        behavior: url(/php/lib/pie/PIE.htc);
         position: absolute;
         top: 0;
         left: 0;
@@ -2872,7 +2993,7 @@ ul {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
-        behavior: url(/pie/PIE.htc);
+        behavior: url(/php/lib/pie/PIE.htc);
         position: absolute;
         top: 5px;
         left: 0;
@@ -3028,7 +3149,6 @@ ul {
 }
 
 .medicine .block_description {
-    font-weight: 100;
     color: #8d8d8d;
 }
 
@@ -3115,7 +3235,7 @@ ul {
     -webkit-border-radius: 19px;
     -moz-border-radius: 19px;
     border-radius: 19px;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     border: 2px solid #5bd3ff;
     margin-top: 25px;
     position: relative;
@@ -3179,7 +3299,6 @@ ul {
 
 .prices .block_description {
     font-size: 1.2em;
-    font-weight: 300;
     color: #8d8d8d;
 }
 
@@ -3229,7 +3348,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     position: absolute;
     top: 0;
     left: 0;
@@ -3244,7 +3363,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     position: absolute;
     top: 5px;
     left: 0;
@@ -3298,7 +3417,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     position: absolute;
     top: calc(50% - 4px);
     left: 8px;
@@ -3489,7 +3608,7 @@ ul {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
-        behavior: url(/pie/PIE.htc);
+        behavior: url(/php/lib/pie/PIE.htc);
         position:relative;
     }
 
@@ -3630,7 +3749,6 @@ ul {
 
 .about .block_description {
     font-size: 1.2em;
-    font-weight: 300;
     color: #8d8d8d;
 }
 
@@ -3678,7 +3796,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     position: absolute;
     top: 0;
     left: 0;
@@ -3693,7 +3811,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     position: absolute;
     top: 5px;
     left: 0;
@@ -3736,7 +3854,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     background-color: #a2e9f6;
     opacity: 0.8;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";  /* IE 8 */
@@ -3751,7 +3869,7 @@ ul {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/pie/PIE.htc);
+    behavior: url(/php/lib/pie/PIE.htc);
     background-color: #a2e9f6;
     opacity: 0.3;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";  /* IE 8 */
@@ -3881,7 +3999,6 @@ footer .social_menu {
 
 .work_process .block_description {
     font-size: 1.2em;
-    font-weight: 300;
     color: #8d8d8d;
 }
 
@@ -4369,7 +4486,7 @@ footer .social_menu {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
-        behavior: url(/pie/PIE.htc);
+        behavior: url(/php/lib/pie/PIE.htc);
         background: rgb(162, 233, 246);
         opacity: 0.8;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";  /* IE 8 */
@@ -4384,7 +4501,7 @@ footer .social_menu {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
-        behavior: url(/pie/PIE.htc);
+        behavior: url(/php/lib/pie/PIE.htc);
         background: rgb(162, 233, 246);
         opacity: 0.3;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";  /* IE 8 */
@@ -4445,7 +4562,8 @@ footer .social_menu {
 
     #slider .slider_text {
         position: absolute;
-        top: calc(50% - 110px);
+        top: 50%;
+        transform: translate(0, -50%);
         left: 100px;
         text-align: left;
     }
@@ -4466,6 +4584,53 @@ footer .social_menu {
         width: 310px;
         line-height: 50px;
     }
+
+    /* slide 1 */
+    #slider .slider_text span {
+        font-weight: 900;
+        font-size: 5em;
+        text-transform: uppercase;
+        color: white;
+        display: block;
+        width: 460px;
+        line-height: 60px;
+    }
+    #slider .slider_text span+span {
+        font-size: 4em;
+        color: #ff5c7b;
+        width: 310px;
+        line-height: 50px;
+    }
+
+    /* slide 1 */
+    #slider .slide_1 .slider_text span {
+        font-size: 4.8em;
+    }
+    #slider .slide_1 .slider_text span+span {
+        width: 370px;
+        font-size: 4em;
+        line-height: normal;
+    }
+
+    /* slide 2 */
+    #slider .slide_2 .slider_text span {
+        font-size: 3.8em;gulp l
+    }
+    #slider .slide_2 .slider_text span+span {
+        width: 385px;
+        font-size: 3.6em;
+    }
+
+    /* slide 3 */
+    #slider .slide_3 .slider_text span {
+        font-size: 5.8em;
+    }
+    #slider .slide_3 .slider_text span+span {
+        width: 385px;
+        font-size: 4.5em;
+        margin-top: 8px;
+    }
+
     /* div "#slider", page "index.html"
    =================================== END ======================================= */
 
@@ -4700,7 +4865,7 @@ footer .social_menu {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
-        behavior: url(/pie/PIE.htc);
+        behavior: url(/php/lib/pie/PIE.htc);
         background: rgb(162, 233, 246);
         opacity: 0.8;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";  /* IE 8 */
@@ -4715,7 +4880,7 @@ footer .social_menu {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
-        behavior: url(/pie/PIE.htc);
+        behavior: url(/php/lib/pie/PIE.htc);
         background: rgb(162, 233, 246);
         opacity: 0.3;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";  /* IE 8 */
@@ -5207,7 +5372,7 @@ footer .social_menu {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
-        behavior: url(/pie/PIE.htc);
+        behavior: url(/php/lib/pie/PIE.htc);
     }
 
     .we_are_the_best .selectable_blocks_container .selectable_block:hover:after {
@@ -5653,7 +5818,7 @@ footer .social_menu {
         padding-left: 58px;
     }
 
-    .contacts .form_container form {
+    .contacts .form_container .form_inner_container {
         width: 50%;
         max-width: 700px;
         left: 50%;

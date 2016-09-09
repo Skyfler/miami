@@ -27,7 +27,7 @@ var path = {
         js: './public/scripts/',
         css: './public/css/',
         img: './public/img/',
-        pie: './public/pie/'
+        php: './public/php/'
     },
     dev: { //Пути откуда брать исходники
         html: './dev/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
@@ -35,9 +35,13 @@ var path = {
         jsie: './dev/scripts/ie/*',
         css: './dev/css/*.css',
         img: './dev/img/used/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
-        pie: './dev/pie/*'
+        php: './dev/php/**/*.*'
     },
-    clean: './public'
+    clean: './public',
+    hosttesting: {
+        public: './public/**/*.*',
+        destination: 'Z:/home/test/www'
+    }
 };
 
 gulp.task('webpack', function() {
@@ -80,9 +84,9 @@ gulp.task('image', function () {
         .pipe(gulp.dest(path.public.img));
 });
 
-gulp.task('pie', function () {
-    gulp.src(path.dev.pie)
-        .pipe(gulp.dest(path.public.pie));
+gulp.task('php', function () {
+    gulp.src(path.dev.php)
+        .pipe(gulp.dest(path.public.php));
 });
 
 gulp.task('html', function() {
@@ -116,4 +120,19 @@ gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
 });
 
-gulp.task('default', ['html', 'css', 'js', 'pie', 'image']);
+gulp.task('l', ['html', 'css']);
+
+gulp.task('default', ['html', 'css', 'js', 'php', 'image']);
+
+/*----------*/
+gulp.task('cleanHost', function (cb) {
+    rimraf(path.hosttesting.destination, cb);
+});
+
+gulp.task('copyFilesHost', function () {
+    gulp.src(path.hosttesting.public)
+        .pipe(gulp.dest(path.hosttesting.destination));
+});
+
+gulp.task('denwer', ['cleanHost', 'copyFilesHost']);
+/*----------*/
