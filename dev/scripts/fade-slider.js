@@ -20,7 +20,7 @@ FadeSlider.prototype._initSlider = function() {
 
     slidesArr[0].classList.add('selected');
 
-    if (0 !== this._moveDelay) this._moveOverTime.bind(this)();
+    if (0 !== this._moveDelay) this._moveOverTime();
 };
 
 FadeSlider.prototype._moveSlideForward = function() {
